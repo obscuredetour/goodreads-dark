@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Goodreads dark theme
 @namespace   https://github.com/obscuredetour/
-@version     1.0.0
+@version     1.1.0
 @license     CC-BY-4.0
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
@@ -16,19 +16,23 @@
         --raven: hsl(168, 11%, 15%);
         --asher: hsl(168, 11%, 17%);
         --aztec: hsl(168, 10%, 20%);
-        --limestone: hsl(168, 15%, 17%);
         --cape-cod: hsla(163, 7%, 23%, 1);
         --corduroy: hsl(165, 13%, 26%);
         --mine: hsl(165, 6%, 28%);
-        --grey: hsl(0, 0%, 67%);
         --mystic: hsl(166, 8%, 38%);
+        --grey: hsl(0, 0%, 67%);
         --alabaster: hsla(42, 31%, 94%, 0.8);
         --zircon: hsl(166, 4%, 91%);
         --concrete: hsl(0, 0%, 95%);
 
-        --jade: hsl(165, 42%, 35%);
+        --limestone: hsl(168, 15%, 17%);
         --elm: hsl(169, 51%, 32%);
+        --jade: hsl(165, 42%, 35%);
+        --robin: hsla(166, 18%, 38%, 1);
         --neptune: hsl(165, 34%, 60%);
+        --conch: hsla(165, 13%, 65%, 1);
+        --green-shadow: hsla(165, 25%, 66%, 1);
+        --powder-ash: hsla(165, 13%, 75%, 1);
         --mint-ice: hsl(165, 70%, 90%);
 
         /* backgrounds */
@@ -61,8 +65,6 @@
     .mainContentFloat,
     #rating_graph,
     .rating_graph,
-    .tooltipTriggerText .tooltip,
-    .tooltipTrigger .tooltip,
     .mainContentContainer,
     .dropdown__menu--wantToReadMenu,
     .gr-popover,
@@ -70,6 +72,18 @@
         background-color: var(--bkg-main);
         color: var(--txt-second);
     }
+
+    /* tool tips */
+    .tooltipTriggerText .tooltip,
+    .tooltipTrigger .tooltip {
+        background-color: var(--raven);
+        color: var(--txt-second);
+        border-color: var(--border);
+    }
+    .tooltipCaret--left {
+        border-right-color: var(--border);
+    }
+
 
     /* Navigation & Footer */
     .siteHeader__topLine, .siteHeader__primaryNavSeparateLine,
@@ -119,8 +133,21 @@
     .wtrButtonContainer .wtrShelfMenu .wtrShelfSearchAddShelf button[type="submit"]:hover,
     .categoryContainer .category:hover,
     .answerButton:hover,
-    div.navigationBox div.navRow a:hover {
+    div.navigationBox div.navRow a:hover,
+    .h1Shelf,
+    .h1Shelf a {
         background: var(--aztec)
+    }
+    .h1Shelf {
+        background: var(--aztec)
+    }
+    .h1Shelf a:hover {
+        background: var(--corduroy)
+    }
+
+    .answerButton:hover,
+    .wantToReadMenu__exclusiveShelf {
+        color: white;
     }
 
     .answerButton:hover,
@@ -141,6 +168,12 @@
         -webkit-box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1), 0 3px 6px rgba(255, 255, 255, 0.08);
     }
 
+    
+    /*-------------
+      TEXT COLORS
+    -------------*/
+
+    /* Nav Link */
     .siteHeader__topLevelLink,
     .primaryNavMenu__trigger {
         color: var(--txt-nav-link)
@@ -159,6 +192,7 @@
         background-color: var(--bkg-nav-link-hover)
     }
 
+    /* LINK TEXT */
     .gr-buttonAsLink,
     a,
     .gr-hyperlink,
@@ -184,6 +218,7 @@
         color: var(--txt-link);
     }
 
+    /* SVG LINK */
     #rating_graph span,
     .rating_graph span svg g rect {
         fill: var(--txt-link);
@@ -196,26 +231,8 @@
     .selectedShelf {
         color: var(--txt-link-bright)
     }
-
-    .gr-book__author,
-    .gr-book__authorLink,
-    .u-defaultType,
-    h2,
-    h3,
-    h4,
-    h5,
-    .siteHeader__heading,
-    H1,
-    .h2Container H2,
-    .pageHeader h2,
-    h2.brownBackground a,
-    .communityAnswerText,
-    .gcaHeader,
-    .gcaHeader a,
-    .aboutRightColumnWide h2 {
-        color: var(--txt-second)
-    }
-
+    
+    /* MAIN TEXT */
     .gr-h1,
     .gr-h3,
     .gr-book__titleLink,
@@ -248,6 +265,33 @@
         color: var(--txt-main)
     }
 
+    /* SECONDARY TEXT */
+    .gr-book__author,
+    .gr-book__authorLink,
+    .u-defaultType,
+    h2,
+    h3,
+    h4,
+    h5,
+    .siteHeader__heading,
+    H1,
+    .h2Container H2,
+    .pageHeader h2,
+    h2.brownBackground a,
+    .communityAnswerText,
+    .gcaHeader,
+    .gcaHeader a,
+    .aboutRightColumnWide h2,
+    .gr-newsfeedItem__resourceNameLink {
+        color: var(--txt-second)
+    }
+
+    /* GREY TEXT */
+    .darkGreyText,
+    h2.brownBackground .extraHeader a {
+        color: var(--txt-grey)
+    }
+
     /* Input & WHITE text*/
     input[type="text"]::placeholder,
     input[type="number"]::placeholder,
@@ -268,7 +312,9 @@
     .communityQuestionSubTitle,
     .infoBoxRowTitle,
     .wantToReadShelfCreator__addNamedShelfButton,
-    .wantToReadShelfCreator__showAddShelfTextboxButton {
+    .wantToReadShelfCreator__showAddShelfTextboxButton,
+    .dataTitle,
+    .goodreadsAuthor, td, th {
         color: white;
     }
 
@@ -282,14 +328,14 @@
     textarea,
     .wtrButtonContainer .wtrNewUserStatus input,
     .wtrButtonContainer .wtrUserStatusConfirmation input {
-        background-color: var(--bkg-main);
+        background-color: var(--cape-cod);
         border-color: transparent;
         color: white;
     }
 
     .wtrButtonContainer .wtrNewUserStatus input,
     .wtrButtonContainer .wtrUserStatusConfirmation input {
-        background-color: var(--bkg-main) !important;
+        background-color: var(--cape-cod) !important;
         border-color: transparent !important;
         color: white !important;
     }
@@ -362,7 +408,7 @@
         border-color: var(--border);
     }
 
-    /* Borders */
+    /* Border Color */
     .circularIcon--border,
     img.circularIcon--medium.circularIcon--border,
     .gr-commentForm__textarea,
@@ -403,7 +449,9 @@
     div.navigationBox div.navRow,
     .genreButton:hover,
     .wantToReadMenu__newShelfButtonContainer,
-    .gr-newsfeedItem {
+    .gr-newsfeedItem,
+    .communityQuestionAndAnswer,
+    h1.authorName {
         border-color: var(--border);
     }
 
@@ -446,26 +494,26 @@
     progress,
     .readingTimeline__progressContainer,
     .graphContainer {
-        background: hsla(165, 25%, 66%, 1);
+        background: var(--green-shadow);
     }
 
     progress::-moz-progress-bar,
     .readingTimeline__progress,
     .graphBar {
-        background: hsla(165, 18%, 38%, 1);
+        background: var(--robin);
     }
 
     /* Webkit */
     progress[value]::-webkit-progress-bar,
     .readingTimeline__progressContainer,
     .graphContainer {
-        background: hsla(165, 25%, 66%, 1);
+        background: var(--green-shadow);
     }
 
     progress[value]::-webkit-progress-value,
     .readingTimeline__progress,
     .graphBar {
-        background: hsla(165, 18%, 38%, 1);
+        background: var(--robin);
     }
 
     /* Buttons */
@@ -476,7 +524,7 @@
     .gr-form--compact__submitButton,
     .searchBox--large__button,
     .large.button {
-        background-color: hsla(165, 13%, 75%, 1);
+        background-color: var(--conch);
         color: var(--bkg-main);
         border-color: var(--border);
     }
@@ -487,7 +535,7 @@
     .gr-form--compact__submitButton:hover,
     .searchBox--large__button:hover,
     .large.button:hover {
-        background-color: hsla(165, 13%, 65%, 1);
+        background-color: var(--powder-ash);
     }
 
     .gr-button:disabled {
@@ -515,6 +563,7 @@
 
     .wantToReadButton__leftUnshelved,
     .dropdown--wantToReadMenu,
+    .wantToReadButton__leftUnshelved,
     .gr-button--choice,
     html.desktop .wtrButtonContainer .wtrRight.wtrDown,
     html.desktop .wtrButtonContainer .wtrRight.wtrDown:hover,
@@ -523,6 +572,10 @@
         background: var(--bkg-button);
         color: var(--txt-button);
         border-color: var(--border);
+    }
+
+    .dropdown--wantToReadMenu {
+        border-left-color: var(--neptune);
     }
 
     .wantToReadButton__leftUnshelved:hover,
@@ -538,21 +591,10 @@
         color: var(--txt-button);
     }
 
-    .gr-shareButton__icon,
+    /* .gr-shareButton__icon,
     .siteHeader__topFullImageContainer {
         display: none;
-    }
-
-    /*
-    -------------
-    TEXT 
-    -------------
-    */
-
-    /* card feed post title */
-    .gr-newsfeedItem__resourceNameLink {
-        color: var(--txt-second);
-    }
+    } */
 
     /*
     -------------
@@ -579,7 +621,7 @@
 
     /*
     -------------
-    EXTRA STYLING 
+    EXTRA FEED STYLING 
     -------------
     */
 
@@ -600,8 +642,12 @@
         border-radius: 6px;
     }
     .gr-book {
-        margin-bottom: 0;
+        margin-bottom: 0.75rem;
     }
+    .gr-newsfeedItem__footerActions {
+        margin-top: -1rem
+    }
+
 
     /* card footer width expansion */
     .likeInformation, .gr-newsfeedItem__footer .gr-comments, .gr-newsfeedItem__footer, .gr-commentForm {
@@ -632,8 +678,29 @@
         border-bottom-right-radius: 10px;
     }
 
+    /* list tweaks */
+    .tableList td,
+    .tableList th,
+    .quote,
+    .brownBox {
+        padding: 1rem 0.5rem;
+    }
+    .brownBox {
+        padding: 0.5rem;
+        border-radius: 6px
+    }
+    .img {
+        border-radius: 3px
+    }
+
     /* border removal */
-    .u-topGrayBorder, .gr-commentForm__textarea {
+    .u-topGrayBorder,
+    .gr-commentForm__textarea,
+    .readerQAForm .textInput,
+    div.bookRow,
+    .tableList td,
+    .tableList th,
+    .quote {
         border: 0;
     }
     /* box-shadow removal */
@@ -641,4 +708,6 @@
         box-shadow: none;
         -webkit-box-shadow: none;
     }
+
+    main { padding-top: 1rem }
 }
