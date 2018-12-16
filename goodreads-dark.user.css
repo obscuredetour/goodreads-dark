@@ -1,0 +1,644 @@
+/* ==UserStyle==
+@name        Goodreads dark theme
+@namespace   https://github.com/obscuredetour/
+@version     1.0.0
+@license     CC-BY-4.0
+@author      obscure detour (https://www.jeffreysummers.me)
+@homepageURL https://github.com/obscuredetour/goodreads-dark
+@updateURL   https://github.com/obscuredetour/goodreads-dark.user.css
+==/UserStyle== */
+
+@-moz-document domain("goodreads.com") {
+    :root {
+        /* color variables - darkest to lightest */
+        --jet: hsl(168, 8%, 12%);
+        --space: hsl(168, 9%, 13%);
+        --raven: hsl(168, 11%, 15%);
+        --asher: hsl(168, 11%, 17%);
+        --aztec: hsl(168, 10%, 20%);
+        --limestone: hsl(168, 15%, 17%);
+        --cape-cod: hsla(163, 7%, 23%, 1);
+        --corduroy: hsl(165, 13%, 26%);
+        --mine: hsl(165, 6%, 28%);
+        --grey: hsl(0, 0%, 67%);
+        --mystic: hsl(166, 8%, 38%);
+        --alabaster: hsla(42, 31%, 94%, 0.8);
+        --zircon: hsl(166, 4%, 91%);
+        --concrete: hsl(0, 0%, 95%);
+
+        --jade: hsl(165, 42%, 35%);
+        --elm: hsl(169, 51%, 32%);
+        --neptune: hsl(165, 34%, 60%);
+        --mint-ice: hsl(165, 70%, 90%);
+
+        /* backgrounds */
+        --bkg-nav: var(--jet);
+        --bkg-main: var(--space);
+        --bkg-card: var(--raven);
+        --bkg-card-foot: var(--asher);
+        --bkg-nav-link-hover: var(--corduroy);
+        --bkg-button: var(--jade);
+        --bkg-button-hover: var(--elm);
+
+        /* text */
+        --txt-main: var(--concrete);
+        --txt-second: var(--zircon);
+        --txt-grey: var(--grey);
+        --txt-nav-link: var(--alabaster);
+        --txt-link: var(--neptune);
+        --txt-link-bright: var(--mint-ice);
+        --txt-button: white;
+
+        /* borders */
+        --border: var(--mine);
+        --border-bright: var(--mystic);
+    }
+
+    /* Main Pages & Sections */
+    body,
+    .gr-homePageBody,
+    .mainContent,
+    .mainContentFloat,
+    #rating_graph,
+    .rating_graph,
+    .tooltipTriggerText .tooltip,
+    .tooltipTrigger .tooltip,
+    .mainContentContainer,
+    .dropdown__menu--wantToReadMenu,
+    .gr-popover,
+    #editFavGenres .recsNotice {
+        background-color: var(--bkg-main);
+        color: var(--txt-second);
+    }
+
+    /* Navigation & Footer */
+    .siteHeader__topLine, .siteHeader__primaryNavSeparateLine,
+    .footerContainer {
+        background: var(--bkg-nav)
+    }
+
+    .primaryNavMenu--siteHeaderBrowseMenu .primaryNavMenu__menu,
+    .primaryNavMenu__menu,
+    .dropdown__menu--discussions,
+    .dropdown__menu--notifications,
+    .siteHeader__subNav--profile,
+    .dropButton .floatingBox,
+    .wtrButtonContainer .wtrShelfMenu,
+    .wtrButtonContainer .wtrFloatingBox,
+    .readingChallengeBanner .challengeStatsContainer2,
+    #books.covers .bookalike:hover .field.actions,
+    .previewBook__topBanner,
+    .answerButton,
+    .tabs .tab,
+    .mediumTabs .tab,
+    .bigTabs .tab,
+    .genreButton:hover,
+    .wantToReadMenu__shelfItem:hover,
+    .wantToReadMenu__newShelfButtonContainer:hover {
+        background: var(--mine)
+    }
+
+    .siteHeader__spotlight--browseMenu::before,
+    .wtrButtonContainer .wtrPrompt,
+    .brownBox,
+    .brown_comment,
+    li.sortable_item:hover,
+    .genreButton {
+        background: var(--cape-cod);
+        border-color: transparent;
+    }
+
+    .featuredGenres__genreSpotlight::before,
+    .genreList__genreLink--selected,
+    .genreList__genreLink:hover,
+    .wtrButtonContainer .wtrShelfMenu>.wtrShelfList>ul.wtrExclusiveShelves>li:hover,
+    .wtrButtonContainer .wtrShelfMenu button.wtrExclusiveShelf:hover,
+    .wtrButtonContainer .wtrShelfMenu button.wtrAddShelf:hover,
+    .wtrButtonContainer .wtrShelfMenu label.wtrExclusiveShelf:hover,
+    .wtrButtonContainer .wtrShelfMenu .wtrNonExclusiveShelves label:hover,
+    .wtrButtonContainer .wtrShelfMenu .wtrShelfSearchAddShelf button[type="submit"]:hover,
+    .categoryContainer .category:hover,
+    .answerButton:hover,
+    div.navigationBox div.navRow a:hover {
+        background: var(--aztec)
+    }
+
+    .answerButton:hover,
+    .wantToReadMenu__exclusiveShelf {
+        color: white;
+    }
+
+    .gr-box--withShadow {
+        box-shadow: 0 3px 6px rgba(255, 255, 255, 0.1), 0 2px 4px rgba(255, 255, 255, 0.08);
+        -webkit-box-shadow: 0 3px 6px rgba(255, 255, 255, 0.1), 0 2px 4px rgba(255, 255, 255, 0.08);
+    }
+
+    .gr-box--withShadowLarge,
+    #coverImage,
+    #books.covers .bookalike .cover img,
+    .gr-popover {
+        box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1), 0 3px 6px rgba(255, 255, 255, 0.08);
+        -webkit-box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1), 0 3px 6px rgba(255, 255, 255, 0.08);
+    }
+
+    .siteHeader__topLevelLink,
+    .primaryNavMenu__trigger {
+        color: var(--txt-nav-link)
+    }
+
+    /* Nav Link Hover & Active */
+    .siteHeader__topLevelLink:hover,
+    .primaryNavMenu__trigger:hover,
+    html.no-touchevents .dropdown__trigger--personalNav:hover,
+    .headerPersonalNav:hover,
+    .primaryNavMenu__trigger--active,
+    .dropdown__trigger--personalNavActive,
+    .tabs .selectedTab,
+    .mediumTabs .selectedTab,
+    .bigTabs .selectedTab {
+        background-color: var(--bkg-nav-link-hover)
+    }
+
+    .gr-buttonAsLink,
+    a,
+    .gr-hyperlink,
+    .gr-shareButton,
+    button.gr-shareButton,
+    .actionLink,
+    .actionLinkLite,
+    .gr-shareButton__textLabel,
+    .shelfLink,
+    .updateActionLinks a,
+    .actionLinkLites a,
+    .wtrButtonContainer .ratingStars .clearRating,
+    .wtrButtonContainer .wtrPrompt a,
+    .communityQuestionPermalink a,
+    .communityQAFooter .likeItContainer a.like_it,
+    .moreReaderQA a,
+    .actionLinks a,
+    .wtrButtonContainer .wtrFloatingBox button.wtrSecondaryCtrl,
+    .wtrButtonContainer .wtrFloatingBox button.wtrExclusiveShelf,
+    .gcaLink,
+    a.shelfNominee__title,
+    .helpLinks a {
+        color: var(--txt-link);
+    }
+
+    #rating_graph span,
+    .rating_graph span svg g rect {
+        fill: var(--txt-link);
+    }
+
+    /* EXTRA BRIGHT LINKS */
+    .newCommentsText,
+    .correct,
+    .correct a,
+    .selectedShelf {
+        color: var(--txt-link-bright)
+    }
+
+    .gr-book__author,
+    .gr-book__authorLink,
+    .u-defaultType,
+    h2,
+    h3,
+    h4,
+    h5,
+    .siteHeader__heading,
+    H1,
+    .h2Container H2,
+    .pageHeader h2,
+    h2.brownBackground a,
+    .communityAnswerText,
+    .gcaHeader,
+    .gcaHeader a,
+    .aboutRightColumnWide h2 {
+        color: var(--txt-second)
+    }
+
+    .gr-h1,
+    .gr-h3,
+    .gr-book__titleLink,
+    .gr-hyperlink--bold,
+    .gr-newsfeedItem__header,
+    #bookAuthors .by,
+    #bookAuthors .authorName,
+    #bookAuthors .authorName__container,
+    .bookAuthorProfile__name a,
+    .tooltipTriggerText .tooltip a,
+    .tooltipTrigger .tooltip a,
+    .wtrButtonContainer .wtrShelfMenu li,
+    .wtrButtonContainer .wtrShelfMenu button.wtrExclusiveShelf,
+    .wtrButtonContainer .wtrShelfMenu button.wtrAddShelf,
+    .wtrButtonContainer .wtrShelfMenu label.wtrExclusiveShelf,
+    .wtrButtonContainer .wtrShelfMenu .wtrNonExclusiveShelves label,
+    .wtrButtonContainer .wtrShelfMenu .wtrShelfSearchAddShelf button[type="submit"],
+    .questionText a,
+    .yearChallengeModule .challengeBooksRead,
+    .authorName,
+    tr.update .authorName,
+    .yearChallengeBooks .viewBooksHeader .progressText,
+    .showUserChallengePage .viewBooksHeader .progressText,
+    .detailChallengeTabs .detailChallengeTabHeader,
+    .readingChallengeBanner .challengeStatsContainer2 .challengeStatItem,
+    .quizQuestionText,
+    .quizDescriptionText,
+    .quizAnswerText,
+    div.navigationBox h3 {
+        color: var(--txt-main)
+    }
+
+    /* Input & WHITE text*/
+    input[type="text"]::placeholder,
+    input[type="number"]::placeholder,
+    input[type="search"]::placeholder,
+    input[type="email"]::placeholder,
+    input[type="number"]::placeholder,
+    input[type="password"]::placeholder,
+    textarea::placeholder,
+    .wtrButtonContainer .wtrFloatingBox .wtrPromptInstruction,
+    .tabs .tab,
+    .tabs .selectedTab,
+    .mediumTabs .tab,
+    .mediumTabs .selectedTab,
+    .bigTabs .tab,
+    .bigTabs .selectedTab,
+    .aboutPageTitle,
+    .siteAnnouncement__title,
+    .communityQuestionSubTitle,
+    .infoBoxRowTitle,
+    .wantToReadShelfCreator__addNamedShelfButton,
+    .wantToReadShelfCreator__showAddShelfTextboxButton {
+        color: white;
+    }
+
+    /* Input */
+    input[type="text"],
+    input[type="number"],
+    input[type="search"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    textarea,
+    .wtrButtonContainer .wtrNewUserStatus input,
+    .wtrButtonContainer .wtrUserStatusConfirmation input {
+        background-color: var(--bkg-main);
+        border-color: transparent;
+        color: white;
+    }
+
+    .wtrButtonContainer .wtrNewUserStatus input,
+    .wtrButtonContainer .wtrUserStatusConfirmation input {
+        background-color: var(--bkg-main) !important;
+        border-color: transparent !important;
+        color: white !important;
+    }
+
+    /* Focus Input Borders */
+    .gr-commentForm__textarea:focus,
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="search"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="password"]:focus,
+    textarea:focus {
+        border-color: transparent;
+        box-shadow: none
+    }
+
+    .siteAnnouncement__description,
+    .siteHeader__subNavLink,
+    .tooltip.book-tooltip .addBookTipDescription,
+    .bookTitle,
+    .wtrButtonContainer .wtrFloatingBox,
+    tr.update .bookTitle,
+    tr.update .authorTitle,
+    .newsfeedItemAnswerText,
+    .category__copy,
+    .gr-label {
+        color: var(--txt-second);
+    }
+
+    .gr-comment__rightSideInformation,
+    .siteHeader__sponsoredNavLink,
+    .kindlePreviewButtonIcon,
+    #details,
+    .gr-form__secondaryAction:hover,
+    .gr-form--compact__secondaryAction:hover,
+    .gr-form--compact__secondaryAction:hover,
+    ul.adminLinks li a,
+    .copyright,
+    .tooltip.book-tooltip .ratingStars .myRating,
+    .userReview,
+    .by,
+    .wtrButtonContainer .wtrPrompt .wtrPromptInstruction,
+    .updateAction,
+    .updateAction a,
+    .quoteText .authorOrTitle,
+    .gcaMoreLink,
+    .choiceWidget__votesCast,
+    .greyText,
+    #aboutFollowUs,
+    #aboutFollowUs a {
+        color: var(--txt-grey);
+    }
+
+    /* Cards - Feed */
+    .gr-newsfeedItem,
+    .siteAnnouncement,
+    div.navigationBox {
+        background-color: var(--bkg-card);
+        border-color: var(--border);
+    }
+
+    /* Card Footer */
+    .likeInformation,
+    .gr-commentForm,
+    .gr-comments,
+    .categoryContainer .category,
+    div.navigationBox div.navigationList {
+        background-color: var(--bkg-card-foot);
+        border-color: var(--border);
+    }
+
+    /* Borders */
+    .circularIcon--border,
+    img.circularIcon--medium.circularIcon--border,
+    .gr-commentForm__textarea,
+    .gr-homePageRailContainer,
+    .gr-book--border,
+    .communityQANewsfeedItem__question,
+    .siteHeader__navDivider,
+    h2.brownBackground,
+    .elementList,
+    .noAnswersMessage,
+    .noQuestionsMessage,
+    .reviewControls,
+    .gr-form__submitButton,
+    .dropButton .floatingBox,
+    #rating_graph span,
+    .rating_graph span,
+    #leadercol,
+    .folder .brownBox,
+    .tableList th,
+    .horizontalGreyDivider,
+    .wtrButtonContainer .wtrShelfMenu>.wtrOtherShelfOptions>label.wtrAddShelf,
+    .wtrButtonContainer .wtrShelfMenu,
+    .wtrButtonContainer .wtrShelfMenu>.wtrOtherShelfOptions>label.wtrAddShelf,
+    .wtrButtonContainer .wtrShelfMenu>.wtrOtherShelfOptions,
+    .wtrButtonContainer .wtrFloatingBox,
+    .tableListReverse td,
+    .tableListReverse th,
+    .Updates,
+    .userProfileName,
+    .wtrButtonContainer .wtrRight,
+    .siteHeader__dropdownHeading,
+    .gr-notification,
+    .answerButton,
+    .rightedBox,
+    .bigTabs,
+    .mediumTabs,
+    .tabs,
+    div.navigationBox div.navRow,
+    .genreButton:hover,
+    .wantToReadMenu__newShelfButtonContainer,
+    .gr-newsfeedItem {
+        border-color: var(--border);
+    }
+
+    .wtrButtonContainer .wtrPrompt::before,
+    .wtrButtonContainer .wtrPrompt::after {
+        border-color: var(--cape-cod) transparent
+    }
+
+    #books.table tbody tr {
+        border-top-color: var(--border);
+        border-bottom-color: var(--border);
+    }
+
+    .circularIcon--border {
+        background-color: var(--bkg-main);
+        border-color: var(--border-bright);
+    }
+
+    small,
+    .gr-metaText,
+    .tableList th a {
+        color: var(--txt-second);
+    }
+
+    .userRating__star, .choiceWidget__title {
+        background-color: transparent
+    }
+
+   .gr-hyperlink--black, .gr-hyperlink--black:hover {
+        color: var(--txt-grey);
+    }
+
+    /* PROGRESS BAR */
+    progress[value] {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    /* Firefox */
+    progress,
+    .readingTimeline__progressContainer,
+    .graphContainer {
+        background: hsla(165, 25%, 66%, 1);
+    }
+
+    progress::-moz-progress-bar,
+    .readingTimeline__progress,
+    .graphBar {
+        background: hsla(165, 18%, 38%, 1);
+    }
+
+    /* Webkit */
+    progress[value]::-webkit-progress-bar,
+    .readingTimeline__progressContainer,
+    .graphContainer {
+        background: hsla(165, 25%, 66%, 1);
+    }
+
+    progress[value]::-webkit-progress-value,
+    .readingTimeline__progress,
+    .graphBar {
+        background: hsla(165, 18%, 38%, 1);
+    }
+
+    /* Buttons */
+    .gr-button,
+    .gr-form__submitButton,
+    .buttonBar,
+    .wtrButtonContainer .wtrLeft.wtrDown,
+    .gr-form--compact__submitButton,
+    .searchBox--large__button,
+    .large.button {
+        background-color: hsla(165, 13%, 75%, 1);
+        color: var(--bkg-main);
+        border-color: var(--border);
+    }
+
+    .gr-button:hover,
+    .gr-form__submitButton:hover,
+    .buttonBar:hover,
+    .gr-form--compact__submitButton:hover,
+    .searchBox--large__button:hover,
+    .large.button:hover {
+        background-color: hsla(165, 13%, 65%, 1);
+    }
+
+    .gr-button:disabled {
+        background-color: var(--bkg-card);
+        color: #666;
+        border-color: var(--border);
+    }
+
+    .gr-button.gr-button--quiet,
+    .gr-button.gr-button--caretRight,
+    .gr-button--caretRight:hover,
+    .gr-button.gr-button--small,
+    .yearChallengeModule .viewChallenge {
+        color: var(--txt-second);
+        border-color: var(--border);
+        background-color: transparent;
+    }
+
+    .gr-button.gr-button--quiet:hover,
+    .gr-button.gr-button--small:hover {
+        color: #fff;
+        background-color: var(--bkg-nav-link-hover);
+        border-color: var(--bkg-nav-link-hover);
+    }
+
+    .wantToReadButton__leftUnshelved,
+    .dropdown--wantToReadMenu,
+    .gr-button--choice,
+    html.desktop .wtrButtonContainer .wtrRight.wtrDown,
+    html.desktop .wtrButtonContainer .wtrRight.wtrDown:hover,
+    html.desktop .wtrButtonContainer .wtrLeft button.wtrToRead,
+    html.desktop .wtrButtonContainer .wtrRight.wtrUp {
+        background: var(--bkg-button);
+        color: var(--txt-button);
+        border-color: var(--border);
+    }
+
+    .wantToReadButton__leftUnshelved:hover,
+    .dropdown--wantToReadMenu:hover,
+    .gr-button--choice:hover,
+    html.desktop .wtrButtonContainer .wtrLeft button.wtrToRead:hover,
+    html.desktop .wtrButtonContainer .wtrRight.wtrUp:hover {
+        background: var(--bkg-button-hover);
+    }
+
+    .wantToReadButton__leftUnshelvedButton,
+    .wantToReadButton__leftUnshelvedButton:hover {
+        color: var(--txt-button);
+    }
+
+    .gr-shareButton__icon,
+    .siteHeader__topFullImageContainer {
+        display: none;
+    }
+
+    /*
+    -------------
+    TEXT 
+    -------------
+    */
+
+    /* card feed post title */
+    .gr-newsfeedItem__resourceNameLink {
+        color: var(--txt-second);
+    }
+
+    /*
+    -------------
+    QUESTIONS 
+    -------------
+    */
+
+    /* author name */
+    .communityQABookInfo .authorInfoAndActions .authorName {
+        color: var(--txt-main);
+    }
+    .communityQuestion .fullQuestionBody {
+        background-color: var(--aztec)
+    }
+    .communityQuestion .triangle {
+        border-color: var(--aztec) transparent transparent transparent
+    }
+    ul.communityQAFooter.answerFooter .footerItem.comment a, .qaInfoModule a {
+        color: var(--txt-link)
+    }
+    .gr-form__secondaryAction, .gr-form--compact__secondaryAction {
+        color: var(--txt-grey)
+    }
+
+    /*
+    -------------
+    EXTRA STYLING 
+    -------------
+    */
+
+    /* card feed */
+    .gr-newsfeedItem {
+        border-radius: 10px;
+        padding: 1rem 0.75rem 0;
+        border: 0;
+    }
+
+    /* card author icon */
+    .gr-newsfeedItem__headerIcon {
+        margin-left: -2.15rem;
+    }
+
+    /* card book border */
+    .gr-book--border {
+        border-radius: 6px;
+    }
+    .gr-book {
+        margin-bottom: 0;
+    }
+
+    /* card footer width expansion */
+    .likeInformation, .gr-newsfeedItem__footer .gr-comments, .gr-newsfeedItem__footer, .gr-commentForm {
+        width: calc(100% + 0.25rem);
+        margin-left: -0.75rem;
+        padding: 0 0.25rem 1rem 0.75rem;
+        border: 0;
+    }
+
+    .likeInformation { 
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .gr-comments__seeAllLinkBox { margin-top: -0.5rem }
+
+    .gr-newsfeedItem__footer {
+        margin: 0 -0.75rem;
+        padding: 0 0.75rem;
+    }
+
+    .gr-newsfeedItem__footer .gr-comments  {
+        width: calc(100% + 0.25rem);
+    }
+
+    .gr-commentForm {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    /* border removal */
+    .u-topGrayBorder, .gr-commentForm__textarea {
+        border: 0;
+    }
+    /* box-shadow removal */
+    .gr-commentForm__textarea:focus {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+}
