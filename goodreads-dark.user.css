@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Goodreads dark theme
 @namespace   https://github.com/obscuredetour/
-@version     1.1.0
+@version     1.2.0
 @license     CC-BY-4.0
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
@@ -68,25 +68,66 @@
     .mainContentContainer,
     .dropdown__menu--wantToReadMenu,
     .gr-popover,
-    #editFavGenres .recsNotice {
+    #editFavGenres .recsNotice,
+    .newsHeader {
         background-color: var(--bkg-main);
         color: var(--txt-second);
     }
 
     /* tool tips */
     .tooltipTriggerText .tooltip,
-    .tooltipTrigger .tooltip {
+    .tooltipTrigger .tooltip,
+    .longTextPopupForm__header,
+    .newsMainContent.mainContentFloat,
+    .prototip .addbook,
+    .wtrButtonContainer .wtrPrompt input[pattern="\\d*"],
+    #fav_authors .section,
+    .gcaRightContainer,
+    .gr-contentBoxMargin--large {
         background-color: var(--raven);
         color: var(--txt-second);
         border-color: var(--border);
     }
+
     .tooltipCaret--left {
         border-right-color: var(--border);
     }
 
+    /* yet more tooltip styles */
+    .prototip {
+        color: var(--txt-second)
+    }
+
+    li.borderMiddle.borderRow[style] {
+        background-color: var(--raven) !important;
+    }
+
+    div.prototip_StemImage[style],
+    .prototip_StemImage {
+        -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+        clip-path: polygon(100% 0, 0 50%, 100% 100%);
+        background: var(--mine) !important;
+    }
+
+    .prototip .borderFrame {
+        border: 6px solid var(--mine);
+        border-radius: 6px;
+    }
+
+    div.prototip_Between[style],
+    .borderBottom.borderRow,
+    .borderTop.borderRow {
+        height: 0 !important;
+    }
+
+    .prototip canvas {
+        background: transparent
+    }
+
 
     /* Navigation & Footer */
-    .siteHeader__topLine, .siteHeader__primaryNavSeparateLine,
+    .siteHeader__topLine,
+    .siteHeader__primaryNavSeparateLine,
     .footerContainer {
         background: var(--bkg-nav)
     }
@@ -117,7 +158,9 @@
     .brownBox,
     .brown_comment,
     li.sortable_item:hover,
-    .genreButton {
+    .genreButton,
+    .u-beigeBackground,
+    .gr-bookSearchResults {
         background: var(--cape-cod);
         border-color: transparent;
     }
@@ -135,13 +178,13 @@
     .answerButton:hover,
     div.navigationBox div.navRow a:hover,
     .h1Shelf,
-    .h1Shelf a {
+    .h1Shelf a,
+    .greyBox {
         background: var(--aztec)
     }
-    .h1Shelf {
-        background: var(--aztec)
-    }
-    .h1Shelf a:hover {
+
+    .h1Shelf a:hover,
+    .gr-bookSearchResults__item--active {
         background: var(--corduroy)
     }
 
@@ -163,12 +206,14 @@
     .gr-box--withShadowLarge,
     #coverImage,
     #books.covers .bookalike .cover img,
-    .gr-popover {
-        box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1), 0 3px 6px rgba(255, 255, 255, 0.08);
-        -webkit-box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1), 0 3px 6px rgba(255, 255, 255, 0.08);
+    .gr-popover,
+    .yearChallengeBooks .yearChallengeCovers .bookCover,
+    .showUserChallengePage .yearChallengeCovers .bookCover {
+        box-shadow: 1px 6px 12px rgba(255, 255, 255, 0.1), 1px 3px 6px rgba(255, 255, 255, 0.08);
+        -webkit-box-shadow: 1px 6px 12px rgba(255, 255, 255, 0.1), 1px 3px 6px rgba(255, 255, 255, 0.08);
     }
 
-    
+
     /*-------------
       TEXT COLORS
     -------------*/
@@ -180,6 +225,7 @@
     }
 
     /* Nav Link Hover & Active */
+    /* Tabs navigation Hover & Active */
     .siteHeader__topLevelLink:hover,
     .primaryNavMenu__trigger:hover,
     html.no-touchevents .dropdown__trigger--personalNav:hover,
@@ -188,8 +234,9 @@
     .dropdown__trigger--personalNavActive,
     .tabs .selectedTab,
     .mediumTabs .selectedTab,
-    .bigTabs .selectedTab {
-        background-color: var(--bkg-nav-link-hover)
+    .bigTabs .selectedTab,
+    .selectedTab.tabHeader {
+        background-color: var(--bkg-nav-link-hover) !important
     }
 
     /* LINK TEXT */
@@ -214,7 +261,10 @@
     .wtrButtonContainer .wtrFloatingBox button.wtrExclusiveShelf,
     .gcaLink,
     a.shelfNominee__title,
-    .helpLinks a {
+    .helpLinks a,
+    .userName,
+    .gcaAuthor a.authorName,
+    a.gcaPollLink {
         color: var(--txt-link);
     }
 
@@ -228,10 +278,11 @@
     .newCommentsText,
     .correct,
     .correct a,
-    .selectedShelf {
+    .selectedShelf,
+    a.gcaBookTitle--red {
         color: var(--txt-link-bright)
     }
-    
+
     /* MAIN TEXT */
     .gr-h1,
     .gr-h3,
@@ -261,8 +312,15 @@
     .quizQuestionText,
     .quizDescriptionText,
     .quizAnswerText,
-    div.navigationBox h3 {
+    div.navigationBox h3,
+    .newsHeaderText,
+    div.wtrPrompt.wtrUserStatusPrompt,
+    #fav_authors .title a {
         color: var(--txt-main)
+    }
+
+    .textColor {
+        color: var(--txt-main) !important
     }
 
     /* SECONDARY TEXT */
@@ -282,13 +340,62 @@
     .gcaHeader,
     .gcaHeader a,
     .aboutRightColumnWide h2,
-    .gr-newsfeedItem__resourceNameLink {
+    small,
+    .gr-metaText,
+    .tableList th a,
+    .prototip .goodreads .toolbar .title,
+    .pollAnswer .result,
+    .gr-newsfeedItem__resourceNameLink,
+    .secondaryCopy,
+    .siteAnnouncement__description,
+    .siteHeader__subNavLink,
+    .tooltip.book-tooltip .addBookTipDescription,
+    .bookTitle,
+    .wtrButtonContainer .wtrFloatingBox,
+    tr.update .bookTitle,
+    tr.update .authorTitle,
+    .newsfeedItemAnswerText,
+    .category__copy,
+    .gr-label,
+    .gcaSubheader,
+    .askTheAuthorCommunityQuestionAnswerContainer__answerText,
+    div.navigationBox .badge,
+    .box h1,
+    .box h2 {
         color: var(--txt-second)
     }
 
     /* GREY TEXT */
     .darkGreyText,
-    h2.brownBackground .extraHeader a {
+    h2.brownBackground .extraHeader a,
+    .gr-comment__rightSideInformation,
+    .siteHeader__sponsoredNavLink,
+    .kindlePreviewButtonIcon,
+    #details,
+    .gr-hyperlink--black,
+    .gr-hyperlink--black:hover,
+    .gr-form__secondaryAction:hover,
+    .gr-form--compact__secondaryAction:hover,
+    .gr-form--compact__secondaryAction:hover,
+    ul.adminLinks li a,
+    .copyright,
+    .tooltip.book-tooltip .ratingStars .myRating,
+    .userReview,
+    .by,
+    .wtrButtonContainer .wtrPrompt .wtrPromptInstruction,
+    .updateAction,
+    .updateAction a,
+    .quoteText .authorOrTitle,
+    .gcaMoreLink,
+    .choiceWidget__votesCast,
+    .greyText,
+    #aboutFollowUs,
+    #aboutFollowUs a,
+    .chatterSource,
+    .readingChallengeDashboard,
+    .askTheAuthorCommunityQuestionAnswerContainer__questionText,
+    .gcaAuthor .greyText,
+    .gcaAuthor .by {
         color: var(--txt-grey)
     }
 
@@ -300,6 +407,10 @@
     input[type="number"]::placeholder,
     input[type="password"]::placeholder,
     textarea::placeholder,
+    #explore_search_query,
+    .searchBox--large__input:active,
+    .searchBox--large__input:focus,
+    .searchBox--large__input,
     .wtrButtonContainer .wtrFloatingBox .wtrPromptInstruction,
     .tabs .tab,
     .tabs .selectedTab,
@@ -314,7 +425,15 @@
     .wantToReadShelfCreator__addNamedShelfButton,
     .wantToReadShelfCreator__showAddShelfTextboxButton,
     .dataTitle,
-    .goodreadsAuthor, td, th {
+    .goodreadsAuthor,
+    td,
+    th,
+    #booklists h2,
+    #booklists h3,
+    .readingChallengeDashboard .progressReport,
+    .yearChallengeTabs .yearChallengeTabHeader,
+    .formWithLabels label,
+    .fakeLabel {
         color: white;
     }
 
@@ -353,59 +472,42 @@
         box-shadow: none
     }
 
-    .siteAnnouncement__description,
-    .siteHeader__subNavLink,
-    .tooltip.book-tooltip .addBookTipDescription,
-    .bookTitle,
-    .wtrButtonContainer .wtrFloatingBox,
-    tr.update .bookTitle,
-    tr.update .authorTitle,
-    .newsfeedItemAnswerText,
-    .category__copy,
-    .gr-label {
-        color: var(--txt-second);
-    }
-
-    .gr-comment__rightSideInformation,
-    .siteHeader__sponsoredNavLink,
-    .kindlePreviewButtonIcon,
-    #details,
-    .gr-form__secondaryAction:hover,
-    .gr-form--compact__secondaryAction:hover,
-    .gr-form--compact__secondaryAction:hover,
-    ul.adminLinks li a,
-    .copyright,
-    .tooltip.book-tooltip .ratingStars .myRating,
-    .userReview,
-    .by,
-    .wtrButtonContainer .wtrPrompt .wtrPromptInstruction,
-    .updateAction,
-    .updateAction a,
-    .quoteText .authorOrTitle,
-    .gcaMoreLink,
-    .choiceWidget__votesCast,
-    .greyText,
-    #aboutFollowUs,
-    #aboutFollowUs a {
-        color: var(--txt-grey);
-    }
-
-    /* Cards - Feed */
+    /* Cards - Feed / Progress update popup */
     .gr-newsfeedItem,
     .siteAnnouncement,
-    div.navigationBox {
+    div.navigationBox,
+    #choiceBody .rightContainer,
+    .longTextPopupForm {
         background-color: var(--bkg-card);
         border-color: var(--border);
     }
 
-    /* Card Footer */
+    /* Card Footer / Progress update popup header */
     .likeInformation,
     .gr-commentForm,
     .gr-comments,
     .categoryContainer .category,
-    div.navigationBox div.navigationList {
+    div.navigationBox div.navigationList,
+    .u-beigeBackground,
+    .editorialCard {
         background-color: var(--bkg-card-foot);
         border-color: var(--border);
+    }
+
+    /* Progress update popup */
+    .u-beigeBackground {
+        border-color: transparent
+    }
+
+    .longTextPopupForm {
+        border: 3px solid var(--border);
+        border-radius: 6px;
+    }
+
+    .longTextPopupForm__header,
+    .longTextPopupForm__remainingCharacterCount,
+    .editorialCard__body {
+        color: var(--alabaster)
     }
 
     /* Border Color */
@@ -451,8 +553,44 @@
     .wantToReadMenu__newShelfButtonContainer,
     .gr-newsfeedItem,
     .communityQuestionAndAnswer,
-    h1.authorName {
+    h1.authorName,
+    .gcaLink--block,
+    .readingChallengeDashboard,
+    .yearChallengeTabs,
+    .challengeParticipants .challengeProgress,
+    .yearChallengeBooks .missingBooksWidget,
+    .showUserChallengePage .missingBooksWidget,
+    .detailChallengeTabs,
+    .gr-bookSearchResults__item,
+    .box h2,
+    .listElement {
         border-color: var(--border);
+    }
+
+    /* Tab navigation */
+    .tabs .tab,
+    .tabs .selectedTab,
+    .mediumTabs .tab,
+    .mediumTabs .selectedTab,
+    .bigTabs .tab,
+    .bigTabs .selectedTab {
+        border-color: var(--txt-link);
+        transition: all 0.2s ease-in-out
+    }
+
+    .tabs .tab,
+    .mediumTabs .tab,
+    .bigTabs .tab {
+        border-color: transparent
+    }
+
+    .tabs .tab:hover,
+    .mediumTabs .tab:hover,
+    .bigTabs .tab:hover,
+    .tabs .selectedTab:hover,
+    .bigTabs .selectedTab:hover,
+    .mediumTabs .selectedTab:hover {
+        border-bottom: 2px solid var(--txt-link)
     }
 
     .wtrButtonContainer .wtrPrompt::before,
@@ -460,28 +598,59 @@
         border-color: var(--cape-cod) transparent
     }
 
+    /* Navigation box */
+    div.navigationBox a.helpTip,
+    div.navigationBox div.navRow a:hover,
+    div.navigationBox div.navRow a.selected,
+    div.navigationBox div.navRow a.selected:hover {
+        background: var(--mine);
+    }
+
+    div.navigationBox div.navRow a:hover,
+    div.navigationBox div.navRow a.selected,
+    div.navigationBox div.navRow a.selected:hover {
+        padding-left: 10px;
+        left: 0;
+        width: 260px;
+    }
+
+    div.navigationBox div.navRow:first-of-type a:hover,
+    div.navigationBox div.navRow:first-of-type a.selected,
+    div.navigationBox div.navRow:first-of-type a.selected:hover {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
+    div.navigationBox div.navRow:last-of-type a:hover,
+    div.navigationBox div.navRow:last-of-type a.selected,
+    div.navigationBox div.navRow:last-of-type a.selected:hover {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    .prototip:not(.prototipAllowOverflow) .prototip_StemImage {
+        transform: rotate(90deg) translateY(-10px);
+    }
+
+    .prototip .goodreads,
+    .prototip .goodreads .toolbar {
+        background: transparent
+    }
+
     #books.table tbody tr {
         border-top-color: var(--border);
         border-bottom-color: var(--border);
     }
 
+    /* User & Author icon images */
     .circularIcon--border {
         background-color: var(--bkg-main);
         border-color: var(--border-bright);
     }
 
-    small,
-    .gr-metaText,
-    .tableList th a {
-        color: var(--txt-second);
-    }
-
-    .userRating__star, .choiceWidget__title {
+    .userRating__star,
+    .choiceWidget__title {
         background-color: transparent
-    }
-
-   .gr-hyperlink--black, .gr-hyperlink--black:hover {
-        color: var(--txt-grey);
     }
 
     /* PROGRESS BAR */
@@ -491,6 +660,7 @@
     }
 
     /* Firefox */
+    /* Notice Box */
     progress,
     .readingTimeline__progressContainer,
     .graphContainer {
@@ -523,10 +693,17 @@
     .wtrButtonContainer .wtrLeft.wtrDown,
     .gr-form--compact__submitButton,
     .searchBox--large__button,
-    .large.button {
+    .large.button,
+    .buttonToggle,
+    .wantToReadButton__leftShelved,
+    .friendFollowButton {
         background-color: var(--conch);
-        color: var(--bkg-main);
+        color: var(--space);
         border-color: var(--border);
+    }
+
+    html.desktop .wtrButtonContainer .wtrLeft.wtrDown {
+        border-color: var(--conch)
     }
 
     .gr-button:hover,
@@ -534,14 +711,20 @@
     .buttonBar:hover,
     .gr-form--compact__submitButton:hover,
     .searchBox--large__button:hover,
-    .large.button:hover {
+    .large.button:hover,
+    .buttonToggle:hover,
+    .wantToReadButton__leftShelved,
+    .friendFollowButton:hover {
         background-color: var(--powder-ash);
     }
 
-    .gr-button:disabled {
+    .gr-button:disabled,
+    .buttonToggle:disabled,
+    .gr-form__submitButton:disabled {
         background-color: var(--bkg-card);
-        color: #666;
+        color: var(--txt-grey);
         border-color: var(--border);
+        cursor: default;
     }
 
     .gr-button.gr-button--quiet,
@@ -568,7 +751,9 @@
     html.desktop .wtrButtonContainer .wtrRight.wtrDown,
     html.desktop .wtrButtonContainer .wtrRight.wtrDown:hover,
     html.desktop .wtrButtonContainer .wtrLeft button.wtrToRead,
-    html.desktop .wtrButtonContainer .wtrRight.wtrUp {
+    html.desktop .wtrButtonContainer .wtrRight.wtrUp,
+    .legacyWantToReadButton .button,
+    .friendFollowButton--dark {
         background: var(--bkg-button);
         color: var(--txt-button);
         border-color: var(--border);
@@ -582,13 +767,33 @@
     .dropdown--wantToReadMenu:hover,
     .gr-button--choice:hover,
     html.desktop .wtrButtonContainer .wtrLeft button.wtrToRead:hover,
-    html.desktop .wtrButtonContainer .wtrRight.wtrUp:hover {
+    html.desktop .wtrButtonContainer .wtrRight.wtrUp:hover,
+    .legacyWantToReadButton .button:hover,
+    .friendFollowButton--dark:hover {
         background: var(--bkg-button-hover);
     }
 
     .wantToReadButton__leftUnshelvedButton,
-    .wantToReadButton__leftUnshelvedButton:hover {
+    .wantToReadButton__leftUnshelvedButton:hover,
+    .friendFollowButton--dark {
         color: var(--txt-button);
+    }
+
+
+    /* Notice Box */
+    .noticeBox,
+    .noticeBox ul,
+    .noticeBox ol,
+    .noticeBox p,
+    .noticeBox td,
+    .noticeBox th {
+        color: var(--space)
+    }
+
+    .noticeBox {
+        background: var(--mint-ice);
+        border: 3px solid var(--green-shadow);
+        border-radius: 6px;
     }
 
     /* .gr-shareButton__icon,
@@ -603,19 +808,26 @@
     */
 
     /* author name */
-    .communityQABookInfo .authorInfoAndActions .authorName {
+    .communityQABookInfo .authorInfoAndActions .authorName,
+    .wtrButtonContainer .wtrLeft.wtrDown .gr-form.gr-form--compact {
         color: var(--txt-main);
     }
+
     .communityQuestion .fullQuestionBody {
         background-color: var(--aztec)
     }
+
     .communityQuestion .triangle {
         border-color: var(--aztec) transparent transparent transparent
     }
-    ul.communityQAFooter.answerFooter .footerItem.comment a, .qaInfoModule a {
+
+    ul.communityQAFooter.answerFooter .footerItem.comment a,
+    .qaInfoModule a {
         color: var(--txt-link)
     }
-    .gr-form__secondaryAction, .gr-form--compact__secondaryAction {
+
+    .gr-form__secondaryAction,
+    .gr-form--compact__secondaryAction {
         color: var(--txt-grey)
     }
 
@@ -637,39 +849,55 @@
         margin-left: -2.15rem;
     }
 
+    /*----------
+    BORDER RADIUS
+    -----------*/
     /* card book border */
-    .gr-book--border {
+    .gr-book--border,
+    #choiceBody .rightContainer,
+    .readingChallengeBanner .bannerYear,
+    .readingChallengeBanner .challengeStatsContainer2,
+    .readingChallengeDashboard,
+    .newsMainContent.mainContentFloat,
+    .greyBox,
+    #fav_authors .section {
         border-radius: 6px;
     }
+
     .gr-book {
         margin-bottom: 0.75rem;
     }
+
     .gr-newsfeedItem__footerActions {
         margin-top: -1rem
     }
 
-
     /* card footer width expansion */
-    .likeInformation, .gr-newsfeedItem__footer .gr-comments, .gr-newsfeedItem__footer, .gr-commentForm {
+    .likeInformation,
+    .gr-newsfeedItem__footer .gr-comments,
+    .gr-newsfeedItem__footer,
+    .gr-commentForm {
         width: calc(100% + 0.25rem);
         margin-left: -0.75rem;
         padding: 0 0.25rem 1rem 0.75rem;
         border: 0;
     }
 
-    .likeInformation { 
+    .likeInformation {
         padding-top: 1rem;
         padding-bottom: 0.5rem;
     }
 
-    .gr-comments__seeAllLinkBox { margin-top: -0.5rem }
+    .gr-comments__seeAllLinkBox {
+        margin-top: -0.5rem
+    }
 
     .gr-newsfeedItem__footer {
         margin: 0 -0.75rem;
         padding: 0 0.75rem;
     }
 
-    .gr-newsfeedItem__footer .gr-comments  {
+    .gr-newsfeedItem__footer .gr-comments {
         width: calc(100% + 0.25rem);
     }
 
@@ -682,14 +910,20 @@
     .tableList td,
     .tableList th,
     .quote,
-    .brownBox {
+    .brownBox,
+    .newsMainContent.mainContentFloat {
         padding: 1rem 0.5rem;
     }
+
     .brownBox {
         padding: 0.5rem;
         border-radius: 6px
     }
-    .img {
+
+    .img,
+    .blogWidth,
+    .twoAcross,
+    .headerImage {
         border-radius: 3px
     }
 
@@ -700,14 +934,29 @@
     div.bookRow,
     .tableList td,
     .tableList th,
-    .quote {
+    .quote,
+    .u-bottomGrayBorder,
+    .editorialCard,
+    .shareBarContainer,
+    .shareBarContainerLast,
+    .shareBarContainerDarkBorder,
+    .wtrButtonContainer .wtrPrompt input[pattern="\\d*"] {
         border: 0;
     }
+
     /* box-shadow removal */
     .gr-commentForm__textarea:focus {
         box-shadow: none;
         -webkit-box-shadow: none;
     }
 
-    main { padding-top: 1rem }
+    main {
+        padding-top: 1rem
+    }
+
+    /* Best of Lists */
+    .gcaDivider,
+    .gcaDivider__centerpiece {
+        height: 0
+    }
 }

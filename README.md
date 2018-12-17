@@ -5,10 +5,27 @@ title: Goodreads.com dark theme
 # Goodreads.com dark theme
 
 ### To do
-[ ] Fix search drop down menu
+[x] Fix search drop down menu
+[x] Tool tips & Pop ups
 [ ] Probably fix many bugs
 
 ## Changelog
+
+### **1.2**
+
+- Book progress popup
+- Search results drop down
+- Best of list
+- Book cover shadows should be consistent
+- Reading challenge pages
+- News & Interview page
+- New Releases page
+- Explore Books page & tooltip from hell
+- Giveaway pages
+- Notice box
+- Recommendations page
+- Choice awards pages
+- Account settings, friend button fixes
 
 ### **1.1**
 
