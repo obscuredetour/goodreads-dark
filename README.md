@@ -11,6 +11,12 @@ title: Goodreads.com dark theme
 
 ## Changelog
 
+### **1.3**
+
+- Validate password screen
+- Year in review page
+- Reading challenge banner
+
 ### **1.2**
 
 - Book progress popup

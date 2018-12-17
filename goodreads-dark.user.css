@@ -179,7 +179,8 @@
     div.navigationBox div.navRow a:hover,
     .h1Shelf,
     .h1Shelf a,
-    .greyBox {
+    .greyBox,
+    .contentBox {
         background: var(--aztec)
     }
 
@@ -264,7 +265,8 @@
     .helpLinks a,
     .userName,
     .gcaAuthor a.authorName,
-    a.gcaPollLink {
+    a.gcaPollLink,
+    .readingYearContent .missingBooksWidget a {
         color: var(--txt-link);
     }
 
@@ -315,7 +317,9 @@
     div.navigationBox h3,
     .newsHeaderText,
     div.wtrPrompt.wtrUserStatusPrompt,
-    #fav_authors .title a {
+    #fav_authors .title a,
+    .yyibCtaBanner,
+    .yearInBooksUserBlurb {
         color: var(--txt-main)
     }
 
@@ -361,7 +365,13 @@
     .askTheAuthorCommunityQuestionAnswerContainer__answerText,
     div.navigationBox .badge,
     .box h1,
-    .box h2 {
+    .box h2,
+    .contentBox .fieldPara label,
+    .readingYearContent .categoryHeading,
+    .readingYearContent .abstractionWidget,
+    .readingYearContent .averageRatingWidget .ratingText,
+    .readingYearContent .crowdFavoriteWidget .bookBlurb .details,
+    .readingYearContent .missingBooksWidget .titleText {
         color: var(--txt-second)
     }
 
@@ -395,7 +405,10 @@
     .readingChallengeDashboard,
     .askTheAuthorCommunityQuestionAnswerContainer__questionText,
     .gcaAuthor .greyText,
-    .gcaAuthor .by {
+    .gcaAuthor .by,
+    .readingYearContent .longestShortestBookWidget .bookBlurbs .details,
+    .readingYearContent .mostLeastPopularBookWidget .details,
+    .readingYearContent .readingChallengeWidget .encouragementMessage {
         color: var(--txt-grey)
     }
 
@@ -407,6 +420,9 @@
     input[type="number"]::placeholder,
     input[type="password"]::placeholder,
     textarea::placeholder,
+    .contentBox input[type="text"]:focus,
+    .contentBox input[type="email"]:focus,
+    .contentBox input[type="password"]:focus,
     #explore_search_query,
     .searchBox--large__input:active,
     .searchBox--large__input:focus,
@@ -433,7 +449,9 @@
     .readingChallengeDashboard .progressReport,
     .yearChallengeTabs .yearChallengeTabHeader,
     .formWithLabels label,
-    .fakeLabel {
+    .fakeLabel,
+    .readingYearContent .standoutText,
+    .readingYearContent .standoutNumber {
         color: white;
     }
 
@@ -489,7 +507,8 @@
     .categoryContainer .category,
     div.navigationBox div.navigationList,
     .u-beigeBackground,
-    .editorialCard {
+    .editorialCard,
+    .readingYearContent .reviewDisplay {
         background-color: var(--bkg-card-foot);
         border-color: var(--border);
     }
@@ -511,6 +530,7 @@
     }
 
     /* Border Color */
+    hr,
     .circularIcon--border,
     img.circularIcon--medium.circularIcon--border,
     .gr-commentForm__textarea,
@@ -563,7 +583,10 @@
     .detailChallengeTabs,
     .gr-bookSearchResults__item,
     .box h2,
-    .listElement {
+    .listElement,
+    .footerCtaBanner,
+    .readingYearContent .missingBooksWidget,
+    .readingYearContent .readingChallengeWidget {
         border-color: var(--border);
     }
 
@@ -676,13 +699,16 @@
     /* Webkit */
     progress[value]::-webkit-progress-bar,
     .readingTimeline__progressContainer,
-    .graphContainer {
+    .graphContainer,
+    .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphContainer,
+    .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphContainerMobile {
         background: var(--green-shadow);
     }
 
     progress[value]::-webkit-progress-value,
     .readingTimeline__progress,
-    .graphBar {
+    .graphBar,
+    .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphBar {
         background: var(--robin);
     }
 
@@ -860,8 +886,14 @@
     .readingChallengeDashboard,
     .newsMainContent.mainContentFloat,
     .greyBox,
-    #fav_authors .section {
+    #fav_authors .section,
+    .readingYearContent .missingBooksWidget,
+    .readingYearContent .readingChallengeWidget {
         border-radius: 6px;
+    }
+    .readingYearContent .readingChallengeWidget .readingChallengeBanner .bannerYear {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 
     .gr-book {
@@ -945,14 +977,23 @@
     }
 
     /* box-shadow removal */
-    .gr-commentForm__textarea:focus {
+    .gr-commentForm__textarea:focus,
+    .contentBox {
         box-shadow: none;
         -webkit-box-shadow: none;
+    }
+
+    .logo a img {
+        background-color: var(--green-shadow);
+        border-radius: 3px;
+        padding: 0.5rem;
     }
 
     main {
         padding-top: 1rem
     }
+
+    div.bannerYear[style] { background-color: var(--elm) !important }
 
     /* Best of Lists */
     .gcaDivider,
