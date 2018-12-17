@@ -92,6 +92,9 @@
     .tooltipCaret--left {
         border-right-color: var(--border);
     }
+    .tooltipCaret--right {
+        border-left-color: var(--border);
+    }
 
     /* yet more tooltip styles */
     .prototip {
@@ -408,7 +411,8 @@
     .gcaAuthor .by,
     .readingYearContent .longestShortestBookWidget .bookBlurbs .details,
     .readingYearContent .mostLeastPopularBookWidget .details,
-    .readingYearContent .readingChallengeWidget .encouragementMessage {
+    .readingYearContent .readingChallengeWidget .encouragementMessage,
+    .tooltip.book-tooltip .paddedRating {
         color: var(--txt-grey)
     }
 
@@ -722,7 +726,11 @@
     .large.button,
     .buttonToggle,
     .wantToReadButton__leftShelved,
-    .friendFollowButton {
+    .friendFollowButton,
+    .tooltipTriggerText .tooltip a.buttonBar,
+    .tooltipTrigger .tooltip a.buttonBar,
+    .tooltipTrigger .tooltip a.kcrPreviewButton,
+    .tooltipTrigger .tooltip a.syncPreviewButton {
         background-color: var(--conch);
         color: var(--space);
         border-color: var(--border);
@@ -740,7 +748,11 @@
     .large.button:hover,
     .buttonToggle:hover,
     .wantToReadButton__leftShelved,
-    .friendFollowButton:hover {
+    .friendFollowButton:hover,
+    .tooltipTriggerText .tooltip a.buttonBar:hover,
+    .tooltipTrigger .tooltip a.buttonBar:hover,
+    .tooltipTrigger .tooltip a.kcrPreviewButton:hover,
+    .tooltipTrigger .tooltip a.syncPreviewButton:hover {
         background-color: var(--powder-ash);
     }
 

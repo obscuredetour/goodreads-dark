@@ -2,14 +2,22 @@
 title: Goodreads.com dark theme
 ---
 
-# Goodreads.com dark theme
+# Goodreads dark (jade) theme
+https://www.goodreads.com
+https://userstyles.org/styles/166991/goodreads-dark-jade-theme
 
 ### To do
-[x] Fix search drop down menu
-[x] Tool tips & Pop ups
-[ ] Probably fix many bugs
+- [x] Fix search drop down menu
+- [x] Tool tips & Pop ups
+- [ ] Fix [about](https://www.goodreads.com/about/us) pages
+- [ ] Probably fix many bugs
 
 ## Changelog
+
+### **1.4**
+
+- Tooltip (right caret) fixes
+- Year in review fixes
 
 ### **1.3**
 
