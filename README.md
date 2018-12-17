@@ -43,7 +43,7 @@ title: Goodreads.com dark theme
 ## Notes
 
 ### Jade City inspired color scheme
-I would like to dedicate this color scheme to Jade City by Fonda Lee. I recently read it and with Goodreads.com default link color as `hsl(176, 100%, 19%)`, I could not resist.
+Color scheme inspired from Jade City by Fonda Lee. With Goodreads.com default link color as `hsl(176, 100%, 19%)`, I could not resist.
 ![Jade color scheme](https://raw.githubusercontent.com/obscuredetour/goodreads-dark/master/jade-palette.png)
 
 ### Bigger project than anticipated
@@ -53,4 +53,9 @@ I also took liberties with the some aesthetics.
 - The removal of many borders.
 - Increased some padding here and there.
 - Rounded out some corners.
+
+## Screenshots
+![Goodreads - Explore](https://raw.githubusercontent.com/obscuredetour/goodreads-dark/master/ss-gr-explore.png)
+![Goodreads - News & Interviews](https://raw.githubusercontent.com/obscuredetour/goodreads-dark/master/ss-gr-news.png)
+![Goodreads - 2018 Choice Awards](https://raw.githubusercontent.com/obscuredetour/goodreads-dark/master/ss-gr-2018-choice.png)
 
