@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Goodreads dark theme
 @namespace   https://github.com/obscuredetour/
-@version     1.2.0
+@version     1.5.0
 @license     CC-BY-4.0
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
@@ -412,7 +412,8 @@
     .readingYearContent .longestShortestBookWidget .bookBlurbs .details,
     .readingYearContent .mostLeastPopularBookWidget .details,
     .readingYearContent .readingChallengeWidget .encouragementMessage,
-    .tooltip.book-tooltip .paddedRating {
+    .tooltip.book-tooltip .paddedRating,
+    .readingTimeline__row {
         color: var(--txt-grey)
     }
 
@@ -593,6 +594,11 @@
     .readingYearContent .readingChallengeWidget {
         border-color: var(--border);
     }
+    
+    #descriptionContainer,
+    .readingTimeline__text {
+        border-color: var(--border-bright);
+    }
 
     /* Tab navigation */
     .tabs .tab,
@@ -696,7 +702,8 @@
 
     progress::-moz-progress-bar,
     .readingTimeline__progress,
-    .graphBar {
+    .graphBar,
+    .readingTimeline__bullet {
         background: var(--robin);
     }
 

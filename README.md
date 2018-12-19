@@ -14,6 +14,10 @@ https://userstyles.org/styles/166991/goodreads-dark-jade-theme
 
 ## Changelog
 
+### **1.5**
+
+- Book description update
+
 ### **1.4**
 
 - Tooltip (right caret) fixes
