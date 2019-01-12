@@ -20,6 +20,7 @@ https://userstyles.org/styles/166991/goodreads-dark-jade-theme
 - Navigational icons also colored to match dark theme
 - Social icons contrast improved
 - About, Careers, & other secondary pages fixed
+- Tweaked drop down shadows
 
 ### **1.5**
 
