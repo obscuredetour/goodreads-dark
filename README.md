@@ -9,10 +9,17 @@ https://userstyles.org/styles/166991/goodreads-dark-jade-theme
 ### To do
 - [x] Fix search drop down menu
 - [x] Tool tips & Pop ups
-- [ ] Fix [about](https://www.goodreads.com/about/us) pages
+- [x] Fix [about](https://www.goodreads.com/about/us) pages
 - [ ] Probably fix many bugs
 
 ## Changelog
+
+### **1.6**
+
+- Logo visible and colored appropriately
+- Navigational icons also colored to match dark theme
+- Social icons contrast improved
+- About, Careers, & other secondary pages fixed
 
 ### **1.5**
 
