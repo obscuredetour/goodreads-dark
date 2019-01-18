@@ -1,8 +1,8 @@
 /* ==UserStyle==
-@name        Goodreads dark theme
+@name        Goodreads dark (Jade) theme
 @namespace   https://github.com/obscuredetour/
-@version     1.5.0
-@license     CC-BY-4.0
+@version     1.7.0
+@license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
 @updateURL   https://github.com/obscuredetour/goodreads-dark.user.css
@@ -16,25 +16,25 @@
         --raven: hsl(168, 11%, 15%);
         --asher: hsl(168, 11%, 17%);
         --aztec: hsl(168, 10%, 20%);
-        --cape-cod: hsla(163, 7%, 23%, 1);
+        --cape-cod: hsl(163, 7%, 23%);
         --corduroy: hsl(165, 13%, 26%);
         --mine: hsl(165, 6%, 28%);
         --mystic: hsl(166, 8%, 38%);
         --grey: hsl(0, 0%, 67%);
-        --alabaster: hsla(42, 31%, 94%, 0.8);
+        --alabaster: hsl(0, 15%, 83%);
         --zircon: hsl(166, 4%, 91%);
         --concrete: hsl(0, 0%, 95%);
-    
-        --limestone: hsl(168, 15%, 17%);
+
+        --limestone: hsl(0, 15%, 17%);
         --elm: hsl(169, 51%, 32%);
-        --jade: hsl(165, 42%, 35%);
+        --jade: rgb(51, 126, 107);
         --robin: hsla(166, 18%, 38%, 1);
         --neptune: hsl(165, 34%, 60%);
         --conch: hsla(165, 13%, 65%, 1);
         --green-shadow: hsla(165, 25%, 66%, 1);
         --powder-ash: hsla(165, 13%, 75%, 1);
         --mint-ice: hsl(165, 70%, 90%);
-    
+
         /* backgrounds */
         --bkg-nav: var(--jet);
         --bkg-main: var(--space);
@@ -43,7 +43,7 @@
         --bkg-nav-link-hover: var(--corduroy);
         --bkg-button: var(--jade);
         --bkg-button-hover: var(--elm);
-    
+
         /* text */
         --txt-main: var(--concrete);
         --txt-second: var(--zircon);
@@ -52,12 +52,12 @@
         --txt-link: var(--neptune);
         --txt-link-bright: var(--mint-ice);
         --txt-button: white;
-    
+
         /* borders */
         --border: var(--mine);
         --border-bright: var(--mystic);
     }
-    
+
     /* Main Pages & Sections */
     body,
     .gr-homePageBody,
@@ -75,21 +75,37 @@
         background-color: var(--bkg-main);
         color: var(--txt-second);
     }
-    
+
+    .mainContentContainer#topLanding {
+        padding: 25px 0
+    }
+
     /* Site logo */
-    .siteHeader__logo {
+    .siteHeader__logo,
+    .logo a img {
         filter: brightness(4) sepia(55%) hue-rotate(115deg) saturate(34%)
     }
+
+    .gr-icon--authorBadge {
+        filter: brightness(3) sepia(55%) hue-rotate(115deg) saturate(34%)
+    }
+
     /* Personal Nav icons */
     .headerPersonalNav__icon {
         filter: brightness(1) sepia(55%) hue-rotate(115deg) saturate(34%)
     }
+
     /* Social icons */
-    .gr-footer__socialLink img, .gr-h1 img {
+    .gr-footer__socialLink img,
+    .gr-h1 img,
+    .responsiveSiteFooterV2__socialLink img {
         filter: invert(1)
     }
-    .dropdown__trigger--profileMenu .headerPersonalNav__icon { filter: unset }
-    
+
+    .dropdown__trigger--profileMenu .headerPersonalNav__icon {
+        filter: unset
+    }
+
     /* tool tips */
     .tooltipTriggerText .tooltip,
     .tooltipTrigger .tooltip,
@@ -104,53 +120,58 @@
         color: var(--txt-second);
         border-color: var(--border);
     }
-    
+
     .tooltipCaret--left {
         border-right-color: var(--border);
     }
+
     .tooltipCaret--right {
         border-left-color: var(--border);
     }
-    
+
     /* yet more tooltip styles */
     .prototip {
-        color: var(--txt-second)
+        color: var(--txt-second);
+        overflow: visible
     }
-    
+
     li.borderMiddle.borderRow[style] {
         background-color: var(--raven) !important;
     }
-    
+
     div.prototip_StemImage[style],
     .prototip_StemImage {
         -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
         clip-path: polygon(100% 0, 0 50%, 100% 100%);
         background: var(--mine) !important;
     }
-    
+
     .prototip .borderFrame {
         border: 6px solid var(--mine);
         border-radius: 6px;
     }
-    
+
+    .prototip .borderCenter[style] {
+        padding: 0 !important;
+    }
+
     div.prototip_Between[style],
     .borderBottom.borderRow,
     .borderTop.borderRow {
         height: 0 !important;
     }
-    
+
     .prototip canvas {
         background: transparent
     }
-    
-    
+
     /* Navigation & Footer */
     .siteHeader__topLine,
     .siteHeader__primaryNavSeparateLine,
     .footerContainer {
         background: var(--bkg-nav)
     }
-    
+
     .primaryNavMenu--siteHeaderBrowseMenu .primaryNavMenu__menu,
     .primaryNavMenu__menu,
     .dropdown__menu--discussions,
@@ -171,7 +192,7 @@
     .wantToReadMenu__newShelfButtonContainer:hover {
         background: var(--mine)
     }
-    
+
     .siteHeader__spotlight--browseMenu::before,
     .wtrButtonContainer .wtrPrompt,
     .brownBox,
@@ -183,11 +204,11 @@
         background: var(--cape-cod);
         border-color: transparent;
     }
-    
+
     .featuredGenres__genreSpotlight::before,
     .genreList__genreLink--selected,
     .genreList__genreLink:hover,
-    .wtrButtonContainer .wtrShelfMenu > .wtrShelfList > ul.wtrExclusiveShelves > li:hover,
+    .wtrButtonContainer .wtrShelfMenu>.wtrShelfList>ul.wtrExclusiveShelves>li:hover,
     .wtrButtonContainer .wtrShelfMenu button.wtrExclusiveShelf:hover,
     .wtrButtonContainer .wtrShelfMenu button.wtrAddShelf:hover,
     .wtrButtonContainer .wtrShelfMenu label.wtrExclusiveShelf:hover,
@@ -202,27 +223,27 @@
     .contentBox {
         background: var(--aztec)
     }
-    
+
     .h1Shelf a:hover,
     .gr-bookSearchResults__item--active {
         background: var(--corduroy)
     }
-    
+
     .answerButton:hover,
     .wantToReadMenu__exclusiveShelf {
         color: white;
     }
-    
+
     .answerButton:hover,
     .wantToReadMenu__exclusiveShelf {
         color: white;
     }
-    
+
     .gr-box--withShadow {
-        box-shadow: 0 3px 6px rgba(255, 255, 255, 0.1), 0 2px 4px rgba(255, 255, 255, 0.08);
-        -webkit-box-shadow: 0 3px 6px rgba(255, 255, 255, 0.1), 0 2px 4px rgba(255, 255, 255, 0.08);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-    
+
     .gr-box--withShadowLarge,
     #coverImage,
     #books.covers .bookalike .cover img,
@@ -232,8 +253,8 @@
         box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.25), 1px 3px 6px rgba(0, 0, 0, 0.1);
         -webkit-box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.25), 1px 3px 6px rgba(0, 0, 0, 0.1);
     }
-    
-    
+
+
     /*-------------
           TEXT COLORS
         -------------*/
@@ -242,7 +263,7 @@
     .primaryNavMenu__trigger {
         color: var(--txt-nav-link)
     }
-    
+
     /* Nav Link Hover & Active */
     /* Tabs navigation Hover & Active */
     .siteHeader__topLevelLink:hover,
@@ -257,7 +278,7 @@
     .selectedTab.tabHeader {
         background-color: var(--bkg-nav-link-hover) !important
     }
-    
+
     /* LINK TEXT */
     .gr-buttonAsLink,
     a,
@@ -284,16 +305,17 @@
     .userName,
     .gcaAuthor a.authorName,
     a.gcaPollLink,
-    .readingYearContent .missingBooksWidget a {
+    .readingYearContent .missingBooksWidget a,
+    .userComment {
         color: var(--txt-link);
     }
-    
+
     /* SVG LINK */
     #rating_graph span,
     .rating_graph span svg g rect {
         fill: var(--txt-link);
     }
-    
+
     /* EXTRA BRIGHT LINKS */
     .newCommentsText,
     .correct,
@@ -302,7 +324,7 @@
     a.gcaBookTitle--red {
         color: var(--txt-link-bright)
     }
-    
+
     /* MAIN TEXT */
     .gr-h1,
     .gr-h3,
@@ -337,14 +359,15 @@
     div.wtrPrompt.wtrUserStatusPrompt,
     #fav_authors .title a,
     .yyibCtaBanner,
-    .yearInBooksUserBlurb {
+    .yearInBooksUserBlurb,
+    .responsiveSiteFooterV2__heading {
         color: var(--txt-main)
     }
-    
+
     .textColor {
         color: var(--txt-main) !important
     }
-    
+
     /* SECONDARY TEXT */
     .gr-book__author,
     .gr-book__authorLink,
@@ -389,10 +412,11 @@
     .readingYearContent .abstractionWidget,
     .readingYearContent .averageRatingWidget .ratingText,
     .readingYearContent .crowdFavoriteWidget .bookBlurb .details,
-    .readingYearContent .missingBooksWidget .titleText {
+    .readingYearContent .missingBooksWidget .titleText,
+    div .challenge-on-track {
         color: var(--txt-second)
     }
-    
+
     /* GREY TEXT */
     .darkGreyText,
     h2.brownBackground .extraHeader a,
@@ -428,10 +452,11 @@
     .readingYearContent .mostLeastPopularBookWidget .details,
     .readingYearContent .readingChallengeWidget .encouragementMessage,
     .tooltip.book-tooltip .paddedRating,
-    .readingTimeline__row {
+    .readingTimeline__row,
+    .responsiveSiteFooterV2__link {
         color: var(--txt-grey)
     }
-    
+
     /* Input & WHITE text*/
     input[type="text"]::placeholder,
     input[type="number"]::placeholder,
@@ -474,7 +499,7 @@
     .readingYearContent .standoutNumber {
         color: white;
     }
-    
+
     /* Input */
     input[type="text"],
     input[type="number"],
@@ -483,20 +508,23 @@
     input[type="number"],
     input[type="password"],
     textarea,
+    .contentBox input[type=text],
+    .contentBox input[type=email],
+    .contentBox input[type=password],
     .wtrButtonContainer .wtrNewUserStatus input,
     .wtrButtonContainer .wtrUserStatusConfirmation input {
         background-color: var(--cape-cod);
         border-color: transparent;
         color: white;
     }
-    
+
     .wtrButtonContainer .wtrNewUserStatus input,
     .wtrButtonContainer .wtrUserStatusConfirmation input {
         background-color: var(--cape-cod) !important;
         border-color: transparent !important;
         color: white !important;
     }
-    
+
     /* Focus Input Borders */
     .gr-commentForm__textarea:focus,
     input[type="text"]:focus,
@@ -505,11 +533,15 @@
     input[type="email"]:focus,
     input[type="number"]:focus,
     input[type="password"]:focus,
-    textarea:focus {
+    textarea:focus,
+    .contentBox input[type=text]:focus,
+    .contentBox input[type=email]:focus,
+    .contentBox input[type=password]:focus {
+        background-color: var(--mine);
         border-color: transparent;
         box-shadow: none
     }
-    
+
     /* Cards - Feed / Progress update popup */
     .gr-newsfeedItem,
     .siteAnnouncement,
@@ -519,7 +551,7 @@
         background-color: var(--bkg-card);
         border-color: var(--border);
     }
-    
+
     /* Card Footer / Progress update popup header */
     .likeInformation,
     .gr-commentForm,
@@ -528,28 +560,29 @@
     div.navigationBox div.navigationList,
     .u-beigeBackground,
     .editorialCard,
-    .readingYearContent .reviewDisplay {
+    .readingYearContent .reviewDisplay,
+    .responsiveSiteFooterV2 {
         background-color: var(--bkg-card-foot);
         border-color: var(--border);
     }
-    
+
     /* Progress update popup */
     .u-beigeBackground {
         border-color: transparent
     }
-    
+
     .longTextPopupForm {
         border: 3px solid var(--border);
         border-radius: 6px;
     }
-    
+
     .longTextPopupForm__header,
     .longTextPopupForm__remainingCharacterCount,
     .editorialCard__body,
     .gr-h2 {
         color: var(--alabaster)
     }
-    
+
     /* Border Color */
     hr,
     .circularIcon--border,
@@ -572,10 +605,10 @@
     .folder .brownBox,
     .tableList th,
     .horizontalGreyDivider,
-    .wtrButtonContainer .wtrShelfMenu > .wtrOtherShelfOptions > label.wtrAddShelf,
+    .wtrButtonContainer .wtrShelfMenu>.wtrOtherShelfOptions>label.wtrAddShelf,
     .wtrButtonContainer .wtrShelfMenu,
-    .wtrButtonContainer .wtrShelfMenu > .wtrOtherShelfOptions > label.wtrAddShelf,
-    .wtrButtonContainer .wtrShelfMenu > .wtrOtherShelfOptions,
+    .wtrButtonContainer .wtrShelfMenu>.wtrOtherShelfOptions>label.wtrAddShelf,
+    .wtrButtonContainer .wtrShelfMenu>.wtrOtherShelfOptions,
     .wtrButtonContainer .wtrFloatingBox,
     .tableListReverse td,
     .tableListReverse th,
@@ -607,15 +640,16 @@
     .listElement,
     .footerCtaBanner,
     .readingYearContent .missingBooksWidget,
-    .readingYearContent .readingChallengeWidget {
+    .readingYearContent .readingChallengeWidget,
+    .mainContentContainer#topLanding .contentBox {
         border-color: var(--border);
     }
-    
+
     #descriptionContainer,
     .readingTimeline__text {
         border-color: var(--border-bright);
     }
-    
+
     /* Tab navigation */
     .tabs .tab,
     .tabs .selectedTab,
@@ -626,13 +660,13 @@
         border-color: var(--txt-link);
         transition: all 0.2s ease-in-out
     }
-    
+
     .tabs .tab,
     .mediumTabs .tab,
     .bigTabs .tab {
         border-color: transparent
     }
-    
+
     .tabs .tab:hover,
     .mediumTabs .tab:hover,
     .bigTabs .tab:hover,
@@ -641,12 +675,12 @@
     .mediumTabs .selectedTab:hover {
         border-bottom: 2px solid var(--txt-link)
     }
-    
+
     .wtrButtonContainer .wtrPrompt::before,
     .wtrButtonContainer .wtrPrompt::after {
         border-color: var(--cape-cod) transparent
     }
-    
+
     /* Navigation box */
     div.navigationBox a.helpTip,
     div.navigationBox div.navRow a:hover,
@@ -654,7 +688,7 @@
     div.navigationBox div.navRow a.selected:hover {
         background: var(--mine);
     }
-    
+
     div.navigationBox div.navRow a:hover,
     div.navigationBox div.navRow a.selected,
     div.navigationBox div.navRow a.selected:hover {
@@ -662,67 +696,68 @@
         left: 0;
         width: 260px;
     }
-    
+
     div.navigationBox div.navRow:first-of-type a:hover,
     div.navigationBox div.navRow:first-of-type a.selected,
     div.navigationBox div.navRow:first-of-type a.selected:hover {
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
     }
-    
+
     div.navigationBox div.navRow:last-of-type a:hover,
     div.navigationBox div.navRow:last-of-type a.selected,
     div.navigationBox div.navRow:last-of-type a.selected:hover {
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
     }
-    
+
     .prototip:not(.prototipAllowOverflow) .prototip_StemImage {
         transform: rotate(90deg) translateY(-10px);
     }
-    
+
     .prototip .goodreads,
     .prototip .goodreads .toolbar {
         background: transparent
     }
-    
+
     #books.table tbody tr {
         border-top-color: var(--border);
         border-bottom-color: var(--border);
     }
-    
+
     /* User & Author icon images */
     .circularIcon--border {
         background-color: var(--bkg-main);
         border-color: var(--border-bright);
     }
-    
+
     .userRating__star,
     .choiceWidget__title {
         background-color: transparent
     }
-    
+
     /* PROGRESS BAR */
     progress[value] {
         -webkit-appearance: none;
         appearance: none;
     }
-    
+
     /* Firefox */
     /* Notice Box */
     progress,
     .readingTimeline__progressContainer,
-    .graphContainer {
+    .graphContainer,
+    .challengeProgress .graphContainer {
         background: var(--green-shadow);
     }
-    
+
     progress::-moz-progress-bar,
     .readingTimeline__progress,
     .graphBar,
     .readingTimeline__bullet {
         background: var(--robin);
     }
-    
+
     /* Webkit */
     progress[value]::-webkit-progress-bar,
     .readingTimeline__progressContainer,
@@ -731,14 +766,14 @@
     .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphContainerMobile {
         background: var(--green-shadow);
     }
-    
+
     progress[value]::-webkit-progress-value,
     .readingTimeline__progress,
     .graphBar,
     .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphBar {
         background: var(--robin);
     }
-    
+
     /* Buttons */
     .gr-button,
     .gr-form__submitButton,
@@ -758,11 +793,11 @@
         color: var(--space);
         border-color: var(--border);
     }
-    
+
     html.desktop .wtrButtonContainer .wtrLeft.wtrDown {
         border-color: var(--conch)
     }
-    
+
     .gr-button:hover,
     .gr-form__submitButton:hover,
     .buttonBar:hover,
@@ -778,7 +813,7 @@
     .tooltipTrigger .tooltip a.syncPreviewButton:hover {
         background-color: var(--powder-ash);
     }
-    
+
     .gr-button:disabled,
     .buttonToggle:disabled,
     .gr-form__submitButton:disabled {
@@ -787,7 +822,7 @@
         border-color: var(--border);
         cursor: default;
     }
-    
+
     .gr-button.gr-button--quiet,
     .gr-button.gr-button--caretRight,
     .gr-button--caretRight:hover,
@@ -797,20 +832,24 @@
         border-color: var(--border);
         background-color: transparent;
     }
-    
-    .jobsValuesButton { border: 2px solid var(--border) }
+
+    .jobsValuesButton {
+        border: 2px solid var(--border)
+    }
+
     .jobsValuesButton:hover {
         background-color: var(--border);
         box-shadow: none;
     }
-    
+
     .gr-button.gr-button--quiet:hover,
     .gr-button.gr-button--small:hover {
         color: #fff;
         background-color: var(--bkg-nav-link-hover);
         border-color: var(--bkg-nav-link-hover);
     }
-    
+
+    .button,
     .wantToReadButton__leftUnshelved,
     .dropdown--wantToReadMenu,
     .wantToReadButton__leftUnshelved,
@@ -819,17 +858,20 @@
     html.desktop .wtrButtonContainer .wtrRight.wtrDown:hover,
     html.desktop .wtrButtonContainer .wtrLeft button.wtrToRead,
     html.desktop .wtrButtonContainer .wtrRight.wtrUp,
+    html.desktop .wtrButtonContainer .wtrUp .center-ratings .legacyWantToReadButton .button,
     .legacyWantToReadButton .button,
+    .legacyWantToReadButton .button .smallButton,
     .friendFollowButton--dark {
         background: var(--bkg-button);
         color: var(--txt-button);
         border-color: var(--border);
     }
-    
-    .dropdown--wantToReadMenu {
-        border-left-color: var(--neptune);
+
+    .dropdown--wantToReadMenu,
+    .wtrButtonContainer .wtrRight {
+        border-left-color: var(--neptune) !important;
     }
-    
+
     .wantToReadButton__leftUnshelved:hover,
     .dropdown--wantToReadMenu:hover,
     .gr-button--choice:hover,
@@ -839,34 +881,31 @@
     .friendFollowButton--dark:hover {
         background: var(--bkg-button-hover);
     }
-    
+
     .wantToReadButton__leftUnshelvedButton,
     .wantToReadButton__leftUnshelvedButton:hover,
-    .friendFollowButton--dark, .jobsValuesButton {
+    .friendFollowButton--dark,
+    .jobsValuesButton {
         color: var(--txt-button);
     }
-    
-    
+
+
     /* Notice Box */
     .noticeBox,
     .noticeBox ul,
     .noticeBox ol,
     .noticeBox p,
     .noticeBox td,
-    .noticeBox th{
+    .noticeBox th {
         color: var(--space)
     }
-    
+
     .noticeBox {
         background: var(--mint-ice);
         border: 3px solid var(--green-shadow);
         border-radius: 6px;
     }
-    
-    /* .gr-shareButton__icon,
-        .siteHeader__topFullImageContainer {
-            display: none;
-        } */
+
     /*
         -------------
         QUESTIONS 
@@ -877,25 +916,26 @@
     .wtrButtonContainer .wtrLeft.wtrDown .gr-form.gr-form--compact {
         color: var(--txt-main);
     }
-    
-    .communityQuestion .fullQuestionBody, .jobsValuesBox {
+
+    .communityQuestion .fullQuestionBody,
+    .jobsValuesBox {
         background-color: var(--aztec)
     }
-    
+
     .communityQuestion .triangle {
         border-color: var(--aztec) transparent transparent transparent
     }
-    
+
     ul.communityQAFooter.answerFooter .footerItem.comment a,
     .qaInfoModule a {
         color: var(--txt-link)
     }
-    
+
     .gr-form__secondaryAction,
     .gr-form--compact__secondaryAction {
         color: var(--txt-grey)
     }
-    
+
     /*
         -------------
         EXTRA FEED STYLING 
@@ -907,12 +947,12 @@
         padding: 1rem 0.75rem 0;
         border: 0;
     }
-    
+
     /* card author icon */
     .gr-newsfeedItem__headerIcon {
         margin-left: -2.15rem;
     }
-    
+
     /*----------
         BORDER RADIUS
         -----------*/
@@ -929,22 +969,20 @@
     .readingYearContent .readingChallengeWidget,
     .aboutHeaderImage img,
     .centered img,
-    .jobsValuesBox {
+    .jobsValuesBox,
+    .gr-editorialBlogPost__image {
         border-radius: 6px;
     }
+
     .readingYearContent .readingChallengeWidget .readingChallengeBanner .bannerYear {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
-    
+
     .gr-book {
         margin-bottom: 0.75rem;
     }
-    
-    .gr-newsfeedItem__footerActions {
-        margin-top: -1rem
-    }
-    
+
     /* card footer width expansion */
     .likeInformation,
     .gr-newsfeedItem__footer .gr-comments,
@@ -955,30 +993,30 @@
         padding: 0 0.25rem 1rem 0.75rem;
         border: 0;
     }
-    
+
     .likeInformation {
         padding-top: 1rem;
         padding-bottom: 0.5rem;
     }
-    
+
     .gr-comments__seeAllLinkBox {
         margin-top: -0.5rem
     }
-    
+
     .gr-newsfeedItem__footer {
         margin: 0 -0.75rem;
         padding: 0 0.75rem;
     }
-    
+
     .gr-newsfeedItem__footer .gr-comments {
         width: calc(100% + 0.25rem);
     }
-    
+
     .gr-commentForm {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
-    
+
     /* list tweaks */
     .tableList td,
     .tableList th,
@@ -987,19 +1025,19 @@
     .newsMainContent.mainContentFloat {
         padding: 1rem 0.5rem;
     }
-    
+
     .brownBox {
         padding: 0.5rem;
         border-radius: 6px
     }
-    
+
     .img,
     .blogWidth,
     .twoAcross,
     .headerImage {
         border-radius: 3px
     }
-    
+
     /* border removal */
     .u-topGrayBorder,
     .gr-commentForm__textarea,
@@ -1016,33 +1054,32 @@
     .wtrButtonContainer .wtrPrompt input[pattern="\\d*"] {
         border: 0;
     }
-    
+
     /* box-shadow removal */
     .gr-commentForm__textarea:focus,
     .contentBox,
     .jobsValuesBox,
-    .jobsValuesButton {
+    .jobsValuesButton,
+    .mainContentContainer#topLanding {
         box-shadow: none;
         -webkit-box-shadow: none;
     }
-    
-    .logo a img {
-        background-color: var(--green-shadow);
-        border-radius: 3px;
-        padding: 0.5rem;
-    }
-    
+
     main {
         padding-top: 1rem
     }
-    
+
+    .distractionless #header {
+        margin-bottom: 0
+    }
+
     div.bannerYear[style] {
         background-color: var(--elm) !important
     }
-    
+
     /* Best of Lists */
     .gcaDivider,
     .gcaDivider__centerpiece {
         height: 0
     }
-    }
+}
