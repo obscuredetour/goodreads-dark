@@ -27,12 +27,12 @@
 
         --limestone: hsl(0, 15%, 17%);
         --elm: hsl(169, 51%, 32%);
-        --jade: rgb(51, 126, 107);
-        --robin: hsla(166, 18%, 38%, 1);
+        --jade: hsl(165, 42%, 35%);
+        --robin: hsl(166, 18%, 38%);
         --neptune: hsl(165, 34%, 60%);
-        --conch: hsla(165, 13%, 65%, 1);
-        --green-shadow: hsla(165, 25%, 66%, 1);
-        --powder-ash: hsla(165, 13%, 75%, 1);
+        --conch: hsl(165, 13%, 65%);
+        --green-shadow: hsl(165, 25%, 66%);
+        --powder-ash: hsl(165, 13%, 75%);
         --mint-ice: hsl(165, 70%, 90%);
 
         /* backgrounds */

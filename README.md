@@ -1,7 +1,15 @@
 <p align="left">
-  <span>
-    <img width=512px src="images/logo.svg">
-  </span>
+  <img width=580px src="images/logo.svg">
+  <br>
+  <a style="display: inline-block" href="https://github.com/obscuredetour/goodreads-dark/">
+    <img alt="Maintained?" src="https://img.shields.io/maintenance/yes/2019.svg?colorB=hsl%28165%2C%2042%25%2C%2035%25%29">
+  </a>
+  <a href="https://github.com/obscuredetour/goodreads-dark/commits/master">
+    <img alt="Last commit" src="https://img.shields.io/github/last-commit/obscuredetour/goodreads-dark.svg?colorB=hsl%28165%2C%2042%25%2C%2035%25%29">
+  </a>
+  <a href="https://github.com/obscuredetour/goodreads-dark/tags">
+    <img alt="Tag" src="https://img.shields.io/github/tag/obscuredetour/goodreads-dark.svg?colorB=hsl%28165%2C%2042%25%2C%2035%25%29&label=version">
+  </a>
 </p>
 
 # Goodreads Dark (Jade) theme

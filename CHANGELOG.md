@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.7.0] - 2019-01-18
+### Changed
+- Readme update with badges
+- Changed color values, HSLA to HSL
+- Changes don't require version bump
+
 ## [1.7.0] - 2019-01-17
 ### Changed
 - Fixed user comment link color
