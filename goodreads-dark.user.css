@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Goodreads dark (Jade) theme
 @namespace   https://github.com/obscuredetour/
-@version     1.7.0
+@version     1.7.1
 @license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
@@ -21,11 +21,11 @@
         --mine: hsl(165, 6%, 28%);
         --mystic: hsl(166, 8%, 38%);
         --grey: hsl(0, 0%, 67%);
-        --alabaster: hsl(0, 15%, 83%);
+        --alabaster: hsl(168, 15%, 83%);
         --zircon: hsl(166, 4%, 91%);
         --concrete: hsl(0, 0%, 95%);
 
-        --limestone: hsl(0, 15%, 17%);
+        --limestone: hsl(168, 15%, 17%);
         --elm: hsl(169, 51%, 32%);
         --jade: hsl(165, 42%, 35%);
         --robin: hsl(166, 18%, 38%);
@@ -94,7 +94,9 @@
     .headerPersonalNav__icon {
         filter: brightness(1) sepia(55%) hue-rotate(115deg) saturate(34%)
     }
-
+    img.circularIcon[src*="nophoto"], img[src*="nophoto"], .wantToReadButton__checkIcon--read {
+        filter: brightness(0.75) sepia(55%) hue-rotate(115deg) saturate(34%)
+    }
     /* Social icons */
     .gr-footer__socialLink img,
     .gr-h1 img,
@@ -200,7 +202,8 @@
     li.sortable_item:hover,
     .genreButton,
     .u-beigeBackground,
-    .gr-bookSearchResults {
+    .gr-bookSearchResults,
+    .gr-newsfeedItem__details {
         background: var(--cape-cod);
         border-color: transparent;
     }
@@ -220,7 +223,9 @@
     .h1Shelf,
     .h1Shelf a,
     .greyBox,
-    .contentBox {
+    .contentBox,
+    .feedFooterReadStatus .brown_comment,
+    .feedFooterReview .brown_comment {
         background: var(--aztec)
     }
 
@@ -306,7 +311,9 @@
     .gcaAuthor a.authorName,
     a.gcaPollLink,
     .readingYearContent .missingBooksWidget a,
-    .userComment {
+    .userComment,
+    .gr-annotatedBooksPage .annotatedBookItem__bookInfo__knhCta,
+    .quizTitle {
         color: var(--txt-link);
     }
 
@@ -413,7 +420,8 @@
     .readingYearContent .averageRatingWidget .ratingText,
     .readingYearContent .crowdFavoriteWidget .bookBlurb .details,
     .readingYearContent .missingBooksWidget .titleText,
-    div .challenge-on-track {
+    div .challenge-on-track,
+    .gr-annotatedBooksPage .annotatedBookItem__bookInfo__bookTitle {
         color: var(--txt-second)
     }
 
@@ -453,7 +461,14 @@
     .readingYearContent .readingChallengeWidget .encouragementMessage,
     .tooltip.book-tooltip .paddedRating,
     .readingTimeline__row,
-    .responsiveSiteFooterV2__link {
+    .responsiveSiteFooterV2__link,
+    .gr-annotatedBooksPage .annotatedBookItem__bookInfo__bookAuthor,
+    .gr-h4,
+    .js-readingNote .ownerActionContainer .visibleToggleContainer .visibleToggleContainer__label,
+    .js-readingNote .ownerActionContainer .deleteContainer .deleteContainer__label,
+    .js-readingNote .ownerActionContainer .markAsSpoilerContainer .markAsSpoilerContainer__label,
+    .readingNotesBanner__SharedWith,
+    .js-readingNote .noteHighlightContainer__location a {
         color: var(--txt-grey)
     }
 
@@ -512,7 +527,8 @@
     .contentBox input[type=email],
     .contentBox input[type=password],
     .wtrButtonContainer .wtrNewUserStatus input,
-    .wtrButtonContainer .wtrUserStatusConfirmation input {
+    .wtrButtonContainer .wtrUserStatusConfirmation input,
+    .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText {
         background-color: var(--cape-cod);
         border-color: transparent;
         color: white;
@@ -536,7 +552,8 @@
     textarea:focus,
     .contentBox input[type=text]:focus,
     .contentBox input[type=email]:focus,
-    .contentBox input[type=password]:focus {
+    .contentBox input[type=password]:focus,
+    .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText:focus {
         background-color: var(--mine);
         border-color: transparent;
         box-shadow: none
@@ -641,7 +658,12 @@
     .footerCtaBanner,
     .readingYearContent .missingBooksWidget,
     .readingYearContent .readingChallengeWidget,
-    .mainContentContainer#topLanding .contentBox {
+    .mainContentContainer#topLanding .contentBox,
+    .gr-annotatedBooksPage .annotatedBooksPage__collection__descriptionContainer,
+    .gr-annotatedBooksPage .annotatedBookItem,
+    .readingNotesOwnerShareContainer,
+    .readingNotesBookDetailsContainer,
+    .js-readingNote {
         border-color: var(--border);
     }
 
@@ -699,7 +721,8 @@
 
     div.navigationBox div.navRow:first-of-type a:hover,
     div.navigationBox div.navRow:first-of-type a.selected,
-    div.navigationBox div.navRow:first-of-type a.selected:hover {
+    div.navigationBox div.navRow:first-of-type a.selected:hover,
+    .noteHighlightTextContainer .likeInformation {
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
     }
@@ -788,13 +811,15 @@
     .tooltipTriggerText .tooltip a.buttonBar,
     .tooltipTrigger .tooltip a.buttonBar,
     .tooltipTrigger .tooltip a.kcrPreviewButton,
-    .tooltipTrigger .tooltip a.syncPreviewButton {
+    .tooltipTrigger .tooltip a.syncPreviewButton,
+    .js-readingNote .noteHighlightTextContainer__highlightText--highlighted>span {
         background-color: var(--conch);
         color: var(--space);
         border-color: var(--border);
     }
 
-    html.desktop .wtrButtonContainer .wtrLeft.wtrDown {
+    html.desktop .wtrButtonContainer .wtrLeft.wtrDown,
+    .js-readingNote .noteHighlightTextContainer__highlightText {
         border-color: var(--conch)
     }
 
@@ -861,7 +886,8 @@
     html.desktop .wtrButtonContainer .wtrUp .center-ratings .legacyWantToReadButton .button,
     .legacyWantToReadButton .button,
     .legacyWantToReadButton .button .smallButton,
-    .friendFollowButton--dark {
+    .friendFollowButton--dark,
+    .readingNotes__HelpTip {
         background: var(--bkg-button);
         color: var(--txt-button);
         border-color: var(--border);
@@ -942,7 +968,9 @@
         -------------
         */
     /* card feed */
-    .gr-newsfeedItem {
+    .gr-newsfeedItem,
+    .gr-newsfeedItem__details,
+    .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText.noEdit {
         border-radius: 10px;
         padding: 1rem 0.75rem 0;
         border: 0;
@@ -970,7 +998,10 @@
     .aboutHeaderImage img,
     .centered img,
     .jobsValuesBox,
-    .gr-editorialBlogPost__image {
+    .gr-editorialBlogPost__image,
+    .gr-newsfeedItem__details,
+    .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText.noEdit,
+    .communityQANewsfeedItem__question {
         border-radius: 6px;
     }
 
@@ -994,13 +1025,24 @@
         border: 0;
     }
 
-    .likeInformation {
+    .likeInformation,
+    .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText.noEdit {
         padding-top: 1rem;
         padding-bottom: 0.5rem;
     }
 
+    .noteHighlightTextContainer .likeInformation,
+    .noteHighlightTextContainer .gr-commentForm {
+        width: unset;
+        margin-left: unset;
+        padding-left: 8px;
+    }
+
     .gr-comments__seeAllLinkBox {
         margin-top: -0.5rem
+    }
+    .noteHighlightTextContainer .gr-comments__seeAllLinkBox {
+      margin-top: 0
     }
 
     .gr-newsfeedItem__footer {

@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.7.1] - 2019-01-27
+### Changed
+- User *Notes & Highlights* & Author *Notes* sections.
+- Themed user book highlights. -Thx [Alana R.](https://forum.userstyles.org/profile/Alana%20R.)
+- Issues when viewing other user profiles.
+- Author question intent not themed correctly.
+- Themed default profile & book images when no photo is present.
+- Titles in the *Quizzes* section.
+
 ## [1.7.0] - 2019-01-18
 ### Changed
 - Readme update with badges
