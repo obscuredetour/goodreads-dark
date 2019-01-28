@@ -473,7 +473,9 @@
   .js-readingNote .ownerActionContainer .deleteContainer .deleteContainer__label,
   .js-readingNote .ownerActionContainer .markAsSpoilerContainer .markAsSpoilerContainer__label,
   .readingNotesBanner__SharedWith,
-  .js-readingNote .noteHighlightContainer__location a {
+  .js-readingNote .noteHighlightContainer__location a,
+  .js-readingNote .spoilerContainer__message,
+  .communityQANewsfeedItem__spoilerWarning {
     color: var(--txt-grey)
   }
 

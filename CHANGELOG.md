@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.7.2] - 2019-01-28
+### Changed
+- User feed's spoiler text.
+
 ## [1.7.1] - 2019-01-27
 ### Changed
 - Show spoiler links fixed.
