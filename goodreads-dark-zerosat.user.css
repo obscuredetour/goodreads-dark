@@ -317,7 +317,8 @@
   .readingYearContent .missingBooksWidget a,
   .userComment,
   .gr-annotatedBooksPage .annotatedBookItem__bookInfo__knhCta,
-  .quizTitle {
+  .quizTitle,
+  .js-readingNote .spoilerContainer__showLink {
     color: var(--txt-link);
   }
 

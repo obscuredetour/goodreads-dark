@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [1.7.1] - 2019-01-27
 ### Changed
+- Show spoiler links fixed.
+
+## [1.7.1] - 2019-01-27
+### Changed
 - User *Notes & Highlights* & Author *Notes* sections.
 - Themed user book highlights. -Thx [Alana R.](https://forum.userstyles.org/profile/Alana%20R.)
 - Issues when viewing other user profiles.
