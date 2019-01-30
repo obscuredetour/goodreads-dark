@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Goodreads dark (Jade) theme
 @namespace   https://github.com/obscuredetour/
-@version     1.7.1
+@version     1.7.3
 @license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
@@ -102,6 +102,9 @@
     .gr-h1 img,
     .responsiveSiteFooterV2__socialLink img {
         filter: invert(1)
+    }
+    .brownBox a[id*='folder_'] img {
+        filter: invert(0.75)
     }
 
     .dropdown__trigger--profileMenu .headerPersonalNav__icon {
@@ -422,7 +425,9 @@
     .readingYearContent .crowdFavoriteWidget .bookBlurb .details,
     .readingYearContent .missingBooksWidget .titleText,
     div .challenge-on-track,
-    .gr-annotatedBooksPage .annotatedBookItem__bookInfo__bookTitle {
+    .gr-annotatedBooksPage .annotatedBookItem__bookInfo__bookTitle,
+    .groupBook .meta .about .value,
+    .groupNav h3 {
         color: var(--txt-second)
     }
 
@@ -471,7 +476,8 @@
     .readingNotesBanner__SharedWith,
     .js-readingNote .noteHighlightContainer__location a,
     .js-readingNote .spoilerContainer__message,
-    .communityQANewsfeedItem__spoilerWarning {
+    .communityQANewsfeedItem__spoilerWarning,
+    .groupBook .meta label, .groupBook .meta dt {
         color: var(--txt-grey)
     }
 
@@ -514,7 +520,8 @@
     .formWithLabels label,
     .fakeLabel,
     .readingYearContent .standoutText,
-    .readingYearContent .standoutNumber {
+    .readingYearContent .standoutNumber,
+    .groupNav a.current {
         color: white;
     }
 
@@ -604,7 +611,7 @@
     }
 
     /* Border Color */
-    hr,
+    hr, h1,
     .circularIcon--border,
     img.circularIcon--medium.circularIcon--border,
     .gr-commentForm__textarea,
@@ -666,12 +673,16 @@
     .gr-annotatedBooksPage .annotatedBookItem,
     .readingNotesOwnerShareContainer,
     .readingNotesBookDetailsContainer,
-    .js-readingNote {
+    .js-readingNote,
+    .groupNav .actionLinkLites {
         border-color: var(--border);
     }
 
     #descriptionContainer,
-    .readingTimeline__text {
+    .readingTimeline__text,
+    #nextGroupBooks .groupBook,
+    #nextGroupBooks .boxHeader,
+    #nextGroupBooks .boxFooter {
         border-color: var(--border-bright);
     }
 
@@ -1008,7 +1019,8 @@
         border-radius: 6px;
     }
 
-    .readingYearContent .readingChallengeWidget .readingChallengeBanner .bannerYear {
+    .readingYearContent .readingChallengeWidget .readingChallengeBanner .bannerYear,
+    .folder .brownBox, .tableList th {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }

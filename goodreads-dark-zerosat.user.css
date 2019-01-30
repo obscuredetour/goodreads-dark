@@ -1,13 +1,12 @@
 /* ==UserStyle==
 @name        Goodreads dark (Jade-ZeroSat) theme
 @namespace   https://github.com/obscuredetour/
-@version     1.7.1
+@version     1.7.3
 @license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
 @updateURL   https://github.com/obscuredetour/goodreads-dark-zerosat.user.css
 ==/UserStyle== */
-
 @-moz-document domain("goodreads.com") {
   :root {
     /* color variables - darkest to lightest */
@@ -106,6 +105,9 @@
   .gr-h1 img,
   .responsiveSiteFooterV2__socialLink img {
     filter: invert(1)
+  }
+  .brownBox a[id*='folder_'] img {
+    filter: invert(0.75)
   }
 
   .dropdown__trigger--profileMenu .headerPersonalNav__icon {
@@ -215,7 +217,7 @@
   .featuredGenres__genreSpotlight::before,
   .genreList__genreLink--selected,
   .genreList__genreLink:hover,
-  .wtrButtonContainer .wtrShelfMenu>.wtrShelfList>ul.wtrExclusiveShelves>li:hover,
+  .wtrButtonContainer .wtrShelfMenu > .wtrShelfList > ul.wtrExclusiveShelves > li:hover,
   .wtrButtonContainer .wtrShelfMenu button.wtrExclusiveShelf:hover,
   .wtrButtonContainer .wtrShelfMenu button.wtrAddShelf:hover,
   .wtrButtonContainer .wtrShelfMenu label.wtrExclusiveShelf:hover,
@@ -232,7 +234,7 @@
   .feedFooterReview .brown_comment {
     background: var(--aztec)
   }
- 
+
   .h1Shelf a:hover,
   .gr-bookSearchResults__item--active {
     background: var(--corduroy)
@@ -426,7 +428,9 @@
   .readingYearContent .crowdFavoriteWidget .bookBlurb .details,
   .readingYearContent .missingBooksWidget .titleText,
   div .challenge-on-track,
-  .gr-annotatedBooksPage .annotatedBookItem__bookInfo__bookTitle {
+  .gr-annotatedBooksPage .annotatedBookItem__bookInfo__bookTitle,
+  .groupBook .meta .about .value,
+  .groupNav h3 {
     color: var(--txt-second)
   }
 
@@ -475,7 +479,9 @@
   .readingNotesBanner__SharedWith,
   .js-readingNote .noteHighlightContainer__location a,
   .js-readingNote .spoilerContainer__message,
-  .communityQANewsfeedItem__spoilerWarning {
+  .communityQANewsfeedItem__spoilerWarning,
+  .groupBook .meta label,
+  .groupBook .meta dt {
     color: var(--txt-grey)
   }
 
@@ -518,7 +524,8 @@
   .formWithLabels label,
   .fakeLabel,
   .readingYearContent .standoutText,
-  .readingYearContent .standoutNumber {
+  .readingYearContent .standoutNumber,
+  .groupNav a.current {
     color: white;
   }
 
@@ -615,6 +622,7 @@
 
   /* Border Color */
   hr,
+  h1,
   .circularIcon--border,
   img.circularIcon--medium.circularIcon--border,
   .gr-commentForm__textarea,
@@ -635,10 +643,10 @@
   .folder .brownBox,
   .tableList th,
   .horizontalGreyDivider,
-  .wtrButtonContainer .wtrShelfMenu>.wtrOtherShelfOptions>label.wtrAddShelf,
+  .wtrButtonContainer .wtrShelfMenu > .wtrOtherShelfOptions > label.wtrAddShelf,
   .wtrButtonContainer .wtrShelfMenu,
-  .wtrButtonContainer .wtrShelfMenu>.wtrOtherShelfOptions>label.wtrAddShelf,
-  .wtrButtonContainer .wtrShelfMenu>.wtrOtherShelfOptions,
+  .wtrButtonContainer .wtrShelfMenu > .wtrOtherShelfOptions > label.wtrAddShelf,
+  .wtrButtonContainer .wtrShelfMenu > .wtrOtherShelfOptions,
   .wtrButtonContainer .wtrFloatingBox,
   .tableListReverse td,
   .tableListReverse th,
@@ -676,12 +684,16 @@
   .gr-annotatedBooksPage .annotatedBookItem,
   .readingNotesOwnerShareContainer,
   .readingNotesBookDetailsContainer,
-  .js-readingNote {
+  .js-readingNote,
+  .groupNav .actionLinkLites {
     border-color: var(--border);
   }
 
   #descriptionContainer,
-  .readingTimeline__text {
+  .readingTimeline__text,
+  #nextGroupBooks .groupBook,
+  #nextGroupBooks .boxHeader,
+  #nextGroupBooks .boxFooter {
     border-color: var(--border-bright);
   }
 
@@ -825,7 +837,7 @@
   .tooltipTrigger .tooltip a.buttonBar,
   .tooltipTrigger .tooltip a.kcrPreviewButton,
   .tooltipTrigger .tooltip a.syncPreviewButton,
-  .js-readingNote .noteHighlightTextContainer__highlightText--highlighted>span {
+  .js-readingNote .noteHighlightTextContainer__highlightText--highlighted > span {
     background-color: var(--conch);
     color: var(--space);
     border-color: var(--border);
@@ -1018,7 +1030,9 @@
     border-radius: 6px;
   }
 
-  .readingYearContent .readingChallengeWidget .readingChallengeBanner .bannerYear {
+  .readingYearContent .readingChallengeWidget .readingChallengeBanner .bannerYear,
+  .folder .brownBox,
+  .tableList th {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
