@@ -15,8 +15,14 @@
 # Goodreads Dark (Jade) theme
 This is a dark theme for the [goodreads.com](https://www.goodreads.com) website. This custom userstyle follows [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) guidelines.
 
-**Too green?**
-Try the [-Zero saturation version](#dark-jade-zero-saturation). It keeps the accent colors the same but zeros out the saturation on the backgrounds making it more grey.
+## 2 versions
+**Default**
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark.user.css)
+This is now the [-Zero saturation version](#dark-jade-zero-saturation). It keeps the accent colors the same but zeros out the saturation on the backgrounds making it more grey. The `zerosat` file will remain for users who have this installed.
+
+**Jade (OG)**
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark-og.user.css)
+Jade (OG) is the original theme. [Seen here](#dark-jade).
 
 ## Table of Contents
 

@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [1.7.3] - 2019-01-30
 ### Changed
+- Default is now zero saturation.
+
+## [1.7.3] - 2019-01-30
+### Changed
 - Group page themed accordingly.
 
 ## [1.7.2] - 2019-01-28
