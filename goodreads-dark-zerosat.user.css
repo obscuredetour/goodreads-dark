@@ -1,7 +1,7 @@
 /* ==UserStyle==
-@name        Goodreads dark (Jade-ZeroSat) theme
+@name        Goodreads dark (Jade) theme
 @namespace   https://github.com/obscuredetour/
-@version     1.7.3
+@version     1.7.4
 @license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
@@ -81,8 +81,26 @@
 
   /* Site logo */
   .siteHeader__logo,
-  .logo a img {
+  .logo a img,
+  #signedOutHome .discoveryBoxDiscovery .discoveryBoxArrow img {
     filter: brightness(4) sepia(55%) hue-rotate(115deg) saturate(34%)
+  }
+
+  #siteheader #logo img {
+    filter: brightness(2) sepia(55%) hue-rotate(115deg) saturate(54%)
+  }
+
+  #siteheader #logo {
+    position: relative
+  }
+
+  #siteheader #logo:after {
+    content: 'dark (jade)';
+    position: absolute;
+    right: -4rem;
+    top: 0;
+    font-size: 13px;
+    color: var(--limestone);
   }
 
   .gr-icon--authorBadge {
@@ -90,7 +108,8 @@
   }
 
   /* Personal Nav icons */
-  .headerPersonalNav__icon {
+  .headerPersonalNav__icon,
+  #signedOutHome #masthead #headline img {
     filter: brightness(1) sepia(55%) hue-rotate(115deg) saturate(34%)
   }
 
@@ -106,12 +125,27 @@
   .responsiveSiteFooterV2__socialLink img {
     filter: invert(1)
   }
+
   .brownBox a[id*='folder_'] img {
     filter: invert(0.75)
   }
 
   .dropdown__trigger--profileMenu .headerPersonalNav__icon {
     filter: unset
+  }
+
+  #signedOutHome .discoveryBoxDiscovery {
+    background-image:
+      linear-gradient(var(--aztec), var(--aztec)),
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAoCAYAAAA%2FtpB3AAAAOElEQVQIW2M6uG%2FlfyZGRkYGdIIBCKAsRgYMWXSCAU5gUYzVAAaELA5tCHUQAxjQZIFir16%2FhXAByw8GmnhQCm8AAAAASUVORK5CYII%3D);
+    background-blend-mode: saturation;
+  }
+
+  #signedOutHome .mainContentContainer {
+    background-image:
+      linear-gradient(var(--bkg-main), var(--bkg-main)),
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAASCAYAAACaV7S8AAAALElEQVQIW2P4DwRMnz48YWBiAAIIwcjIBCIYgVw4CyLGAGOhSyApBpoBMhQAWY0LCsZmAMgAAAAASUVORK5CYII%3D);
+    background-blend-mode: saturation;
   }
 
   /* tool tips */
@@ -217,7 +251,7 @@
   .featuredGenres__genreSpotlight::before,
   .genreList__genreLink--selected,
   .genreList__genreLink:hover,
-  .wtrButtonContainer .wtrShelfMenu > .wtrShelfList > ul.wtrExclusiveShelves > li:hover,
+  .wtrButtonContainer .wtrShelfMenu>.wtrShelfList>ul.wtrExclusiveShelves>li:hover,
   .wtrButtonContainer .wtrShelfMenu button.wtrExclusiveShelf:hover,
   .wtrButtonContainer .wtrShelfMenu button.wtrAddShelf:hover,
   .wtrButtonContainer .wtrShelfMenu label.wtrExclusiveShelf:hover,
@@ -231,7 +265,8 @@
   .greyBox,
   .contentBox,
   .feedFooterReadStatus .brown_comment,
-  .feedFooterReview .brown_comment {
+  .feedFooterReview .brown_comment,
+  #signedOutHome #discoveryBox {
     background: var(--aztec)
   }
 
@@ -267,8 +302,8 @@
 
 
   /*-------------
-      TEXT COLORS
-    -------------*/
+        TEXT COLORS
+      -------------*/
   /* Nav Link */
   .siteHeader__topLevelLink,
   .primaryNavMenu__trigger {
@@ -430,7 +465,11 @@
   div .challenge-on-track,
   .gr-annotatedBooksPage .annotatedBookItem__bookInfo__bookTitle,
   .groupBook .meta .about .value,
-  .groupNav h3 {
+  .groupNav h3,
+  #signedOutHome h2:first-child,
+  #signedOutHome h3:first-child,
+  #signedOutHome p:first-child,
+  #signedOutHome .discoveryBoxDiscovery .discoveryBoxResultBook .discoveryBoxResultDescriptors {
     color: var(--txt-second)
   }
 
@@ -548,7 +587,11 @@
   .contentBox input[type=password],
   .wtrButtonContainer .wtrNewUserStatus input,
   .wtrButtonContainer .wtrUserStatusConfirmation input,
-  .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText {
+  .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText,
+  #signedOutHome #sitesearch input,
+  #signedOutHome #navBar #signInForm input[type="email"],
+  #signedOutHome #navBar #signInForm input[type="text"],
+  #signedOutHome #navBar #signInForm input[type="password"] {
     background-color: var(--cape-cod);
     border-color: transparent;
     color: white;
@@ -573,7 +616,11 @@
   .contentBox input[type=text]:focus,
   .contentBox input[type=email]:focus,
   .contentBox input[type=password]:focus,
-  .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText:focus {
+  .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText:focus,
+  #signedOutHome #sitesearch input:focus,
+  #signedOutHome #navBar #signInForm input[type="email"]:focus,
+  #signedOutHome #navBar #signInForm input[type="text"]:focus,
+  #signedOutHome #navBar #signInForm input[type="password"]:focus {
     background-color: var(--mine);
     border-color: transparent;
     box-shadow: none
@@ -643,10 +690,10 @@
   .folder .brownBox,
   .tableList th,
   .horizontalGreyDivider,
-  .wtrButtonContainer .wtrShelfMenu > .wtrOtherShelfOptions > label.wtrAddShelf,
+  .wtrButtonContainer .wtrShelfMenu>.wtrOtherShelfOptions>label.wtrAddShelf,
   .wtrButtonContainer .wtrShelfMenu,
-  .wtrButtonContainer .wtrShelfMenu > .wtrOtherShelfOptions > label.wtrAddShelf,
-  .wtrButtonContainer .wtrShelfMenu > .wtrOtherShelfOptions,
+  .wtrButtonContainer .wtrShelfMenu>.wtrOtherShelfOptions>label.wtrAddShelf,
+  .wtrButtonContainer .wtrShelfMenu>.wtrOtherShelfOptions,
   .wtrButtonContainer .wtrFloatingBox,
   .tableListReverse td,
   .tableListReverse th,
@@ -685,7 +732,8 @@
   .readingNotesOwnerShareContainer,
   .readingNotesBookDetailsContainer,
   .js-readingNote,
-  .groupNav .actionLinkLites {
+  .groupNav .actionLinkLites,
+  #signedOutHome .featureTeaserBox .listTeaser {
     border-color: var(--border);
   }
 
@@ -710,7 +758,8 @@
 
   .tabs .tab,
   .mediumTabs .tab,
-  .bigTabs .tab {
+  .bigTabs .tab,
+  #signInForm .gr-button.gr-button--dark {
     border-color: transparent
   }
 
@@ -837,7 +886,9 @@
   .tooltipTrigger .tooltip a.buttonBar,
   .tooltipTrigger .tooltip a.kcrPreviewButton,
   .tooltipTrigger .tooltip a.syncPreviewButton,
-  .js-readingNote .noteHighlightTextContainer__highlightText--highlighted > span {
+  .js-readingNote .noteHighlightTextContainer__highlightText--highlighted>span,
+  #signedOutHome #newAccountBox .button,
+  .gr-button.gr-button--dark {
     background-color: var(--conch);
     color: var(--space);
     border-color: var(--border);
@@ -860,7 +911,9 @@
   .tooltipTriggerText .tooltip a.buttonBar:hover,
   .tooltipTrigger .tooltip a.buttonBar:hover,
   .tooltipTrigger .tooltip a.kcrPreviewButton:hover,
-  .tooltipTrigger .tooltip a.syncPreviewButton:hover {
+  .tooltipTrigger .tooltip a.syncPreviewButton:hover,
+  #signedOutHome #newAccountBox .button:hover,
+  .gr-button.gr-button--dark:hover {
     background-color: var(--powder-ash);
   }
 
@@ -947,7 +1000,8 @@
   .noticeBox ol,
   .noticeBox p,
   .noticeBox td,
-  .noticeBox th {
+  .noticeBox th,
+  #signedOutHome #masthead #newAccountBox h2 {
     color: var(--space)
   }
 
@@ -958,10 +1012,10 @@
   }
 
   /*
-    -------------
-    QUESTIONS 
-    -------------
-    */
+      -------------
+      QUESTIONS 
+      -------------
+      */
   /* author name */
   .communityQABookInfo .authorInfoAndActions .authorName,
   .wtrButtonContainer .wtrLeft.wtrDown .gr-form.gr-form--compact {
@@ -988,10 +1042,10 @@
   }
 
   /*
-    -------------
-    EXTRA FEED STYLING 
-    -------------
-    */
+      -------------
+      EXTRA FEED STYLING 
+      -------------
+      */
   /* card feed */
   .gr-newsfeedItem,
   .gr-newsfeedItem__details,
@@ -1007,8 +1061,8 @@
   }
 
   /*----------
-    BORDER RADIUS
-    -----------*/
+      BORDER RADIUS
+      -----------*/
   /* card book border */
   .gr-book--border,
   #choiceBody .rightContainer,

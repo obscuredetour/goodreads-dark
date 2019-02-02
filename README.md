@@ -19,12 +19,12 @@ This is a dark theme for the [goodreads.com](https://www.goodreads.com) website.
 **Default**
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark.user.css)
 
-This is now the [-Zero saturation version](#dark-jade-zero-saturation). It keeps the accent colors the same but zeros out the saturation on the backgrounds making it more grey. The `zerosat` file will remain for users who have this installed.
+Default is now the [-Zero saturation version](#dark-jade-default). It keeps the accent colors the same but zeros out the saturation on the backgrounds making it more grey. The `zerosat` file will remain for users who have this installed.
 
 **Jade (OG)**
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark-og.user.css)
 
-Jade (OG) is the original theme. [Seen here](#dark-jade).
+Jade (OG) is the original theme. [Seen here](#dark-jade-og).
 
 ## Table of Contents
 
@@ -35,12 +35,17 @@ Jade (OG) is the original theme. [Seen here](#dark-jade).
 5. [Notes](#notes)
 
 ## Preview
-### Dark Jade
+
+### Dark Jade (Default)
+![Goodreads - Login](images/ss-gr-login-zs.png)
+![Goodreads - Recent](images/ss-gr-recent-zerosat.png)
+
+### Dark Jade (OG)
+![Goodreads - Login](images/ss-gr-login-og.png)
 ![Goodreads - Recent](images/ss-gr-recent.png)
 ![Goodreads - Choice Awards](images/ss-gr-2018-choice.png)
 
-### Dark Jade Zero Saturation
-![Goodreads - Recent](images/ss-gr-recent-zerosat.png)
+
 
 **[Back to top](#table-of-contents)**
 

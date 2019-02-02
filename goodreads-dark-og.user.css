@@ -1,61 +1,61 @@
 /* ==UserStyle==
-@name        Goodreads dark (Jade) theme
+@name        Goodreads dark (Jade-OG) theme
 @namespace   https://github.com/obscuredetour/
-@version     1.7.3
+@version     1.7.4
 @license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
-@updateURL   https://github.com/obscuredetour/goodreads-dark.user.css
+@updateURL   https://github.com/obscuredetour/goodreads-dark-og.user.css
 ==/UserStyle== */
 
 @-moz-document domain("goodreads.com") {
   :root {
-      /* color variables - darkest to lightest */
-      --jet: hsl(168, 8%, 12%);
-      --space: hsl(168, 9%, 13%);
-      --raven: hsl(168, 11%, 15%);
-      --asher: hsl(168, 11%, 17%);
-      --aztec: hsl(168, 10%, 20%);
-      --cape-cod: hsl(163, 7%, 23%);
-      --corduroy: hsl(165, 13%, 26%);
-      --mine: hsl(165, 6%, 28%);
-      --mystic: hsl(166, 8%, 38%);
-      --grey: hsl(0, 0%, 67%);
-      --alabaster: hsl(168, 15%, 83%);
-      --zircon: hsl(166, 4%, 91%);
-      --concrete: hsl(0, 0%, 95%);
+    /* color variables - darkest to lightest */
+    --jet: hsl(168, 8%, 12%);
+    --space: hsl(168, 9%, 13%);
+    --raven: hsl(168, 11%, 15%);
+    --asher: hsl(168, 11%, 17%);
+    --aztec: hsl(168, 10%, 20%);
+    --cape-cod: hsl(163, 7%, 23%);
+    --corduroy: hsl(165, 13%, 26%);
+    --mine: hsl(165, 6%, 28%);
+    --mystic: hsl(166, 8%, 38%);
+    --grey: hsl(0, 0%, 67%);
+    --alabaster: hsl(168, 15%, 83%);
+    --zircon: hsl(166, 4%, 91%);
+    --concrete: hsl(0, 0%, 95%);
 
-      --limestone: hsl(168, 15%, 17%);
-      --elm: hsl(169, 51%, 32%);
-      --jade: hsl(165, 42%, 35%);
-      --robin: hsl(166, 18%, 38%);
-      --neptune: hsl(165, 34%, 60%);
-      --conch: hsl(165, 13%, 65%);
-      --green-shadow: hsl(165, 25%, 66%);
-      --powder-ash: hsl(165, 13%, 75%);
-      --mint-ice: hsl(165, 70%, 90%);
+    --limestone: hsl(168, 15%, 17%);
+    --elm: hsl(169, 51%, 32%);
+    --jade: hsl(165, 42%, 35%);
+    --robin: hsl(166, 18%, 38%);
+    --neptune: hsl(165, 34%, 60%);
+    --conch: hsl(165, 13%, 65%);
+    --green-shadow: hsl(165, 25%, 66%);
+    --powder-ash: hsl(165, 13%, 75%);
+    --mint-ice: hsl(165, 70%, 90%);
 
-      /* backgrounds */
-      --bkg-nav: var(--jet);
-      --bkg-main: var(--space);
-      --bkg-card: var(--raven);
-      --bkg-card-foot: var(--asher);
-      --bkg-nav-link-hover: var(--corduroy);
-      --bkg-button: var(--jade);
-      --bkg-button-hover: var(--elm);
+    /* backgrounds */
+    --bkg-nav: var(--jet);
+    --bkg-main: var(--space);
+    --bkg-card: var(--raven);
+    --bkg-card-foot: var(--asher);
+    --bkg-nav-link-hover: var(--corduroy);
+    --bkg-button: var(--jade);
+    --bkg-button-hover: var(--elm);
 
-      /* text */
-      --txt-main: var(--concrete);
-      --txt-second: var(--zircon);
-      --txt-grey: var(--grey);
-      --txt-nav-link: var(--alabaster);
-      --txt-link: var(--neptune);
-      --txt-link-bright: var(--mint-ice);
-      --txt-button: white;
+    /* text */
+    --txt-main: var(--concrete);
+    --txt-second: var(--zircon);
+    --txt-grey: var(--grey);
+    --txt-nav-link: var(--alabaster);
+    --txt-link: var(--neptune);
+    --txt-link-bright: var(--mint-ice);
+    --txt-button: white;
 
-      /* borders */
-      --border: var(--mine);
-      --border-bright: var(--mystic);
+    /* borders */
+    --border: var(--mine);
+    --border-bright: var(--mystic);
   }
 
   /* Main Pages & Sections */
@@ -72,43 +72,81 @@
   .newsHeader,
   .aboutRightColumnWide section,
   .aboutRightColumnWide section h2 {
-      background-color: var(--bkg-main);
-      color: var(--txt-second);
+    background-color: var(--bkg-main);
+    color: var(--txt-second);
   }
 
   .mainContentContainer#topLanding {
-      padding: 25px 0
+    padding: 25px 0
   }
 
   /* Site logo */
   .siteHeader__logo,
-  .logo a img {
-      filter: brightness(4) sepia(55%) hue-rotate(115deg) saturate(34%)
+  .logo a img,
+  #signedOutHome .discoveryBoxDiscovery .discoveryBoxArrow img {
+    filter: brightness(4) sepia(55%) hue-rotate(115deg) saturate(34%)
+  }
+
+  #siteheader #logo img {
+    filter: brightness(2) sepia(55%) hue-rotate(115deg) saturate(54%)
+  }
+
+  #siteheader #logo {
+    position: relative
+  }
+
+  #siteheader #logo:after {
+    content: 'dark (jade)';
+    position: absolute;
+    right: -4rem;
+    top: 0;
+    font-size: 13px;
+    color: var(--limestone);
   }
 
   .gr-icon--authorBadge {
-      filter: brightness(3) sepia(55%) hue-rotate(115deg) saturate(34%)
+    filter: brightness(3) sepia(55%) hue-rotate(115deg) saturate(34%)
   }
 
   /* Personal Nav icons */
-  .headerPersonalNav__icon {
-      filter: brightness(1) sepia(55%) hue-rotate(115deg) saturate(34%)
+  .headerPersonalNav__icon,
+  #signedOutHome #masthead #headline img {
+    filter: brightness(1) sepia(55%) hue-rotate(115deg) saturate(34%)
   }
-  img.circularIcon[src*="nophoto"], img[src*="nophoto"], .wantToReadButton__checkIcon--read {
-      filter: brightness(0.75) sepia(55%) hue-rotate(115deg) saturate(34%)
+
+  img.circularIcon[src*="nophoto"],
+  img[src*="nophoto"],
+  .wantToReadButton__checkIcon--read {
+    filter: brightness(0.75) sepia(55%) hue-rotate(115deg) saturate(34%)
   }
+
   /* Social icons */
   .gr-footer__socialLink img,
   .gr-h1 img,
   .responsiveSiteFooterV2__socialLink img {
-      filter: invert(1)
+    filter: invert(1)
   }
+
   .brownBox a[id*='folder_'] img {
-      filter: invert(0.75)
+    filter: invert(0.75)
   }
 
   .dropdown__trigger--profileMenu .headerPersonalNav__icon {
-      filter: unset
+    filter: unset
+  }
+
+  #signedOutHome .discoveryBoxDiscovery {
+    background-image:
+      linear-gradient(var(--aztec), var(--aztec)),
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAoCAYAAAA%2FtpB3AAAAOElEQVQIW2M6uG%2FlfyZGRkYGdIIBCKAsRgYMWXSCAU5gUYzVAAaELA5tCHUQAxjQZIFir16%2FhXAByw8GmnhQCm8AAAAASUVORK5CYII%3D);
+    background-blend-mode: saturation;
+  }
+
+  #signedOutHome .mainContentContainer {
+    background-image:
+      linear-gradient(var(--bkg-main), var(--bkg-main)),
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAASCAYAAACaV7S8AAAALElEQVQIW2P4DwRMnz48YWBiAAIIwcjIBCIYgVw4CyLGAGOhSyApBpoBMhQAWY0LCsZmAMgAAAAASUVORK5CYII%3D);
+    background-blend-mode: saturation;
   }
 
   /* tool tips */
@@ -121,60 +159,60 @@
   #fav_authors .section,
   .gcaRightContainer,
   .gr-contentBoxMargin--large {
-      background-color: var(--raven);
-      color: var(--txt-second);
-      border-color: var(--border);
+    background-color: var(--raven);
+    color: var(--txt-second);
+    border-color: var(--border);
   }
 
   .tooltipCaret--left {
-      border-right-color: var(--border);
+    border-right-color: var(--border);
   }
 
   .tooltipCaret--right {
-      border-left-color: var(--border);
+    border-left-color: var(--border);
   }
 
   /* yet more tooltip styles */
   .prototip {
-      color: var(--txt-second);
-      overflow: visible
+    color: var(--txt-second);
+    overflow: visible
   }
 
   li.borderMiddle.borderRow[style] {
-      background-color: var(--raven) !important;
+    background-color: var(--raven) !important;
   }
 
   div.prototip_StemImage[style],
   .prototip_StemImage {
-      -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
-      clip-path: polygon(100% 0, 0 50%, 100% 100%);
-      background: var(--mine) !important;
+    -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    background: var(--mine) !important;
   }
 
   .prototip .borderFrame {
-      border: 6px solid var(--mine);
-      border-radius: 6px;
+    border: 6px solid var(--mine);
+    border-radius: 6px;
   }
 
   .prototip .borderCenter[style] {
-      padding: 0 !important;
+    padding: 0 !important;
   }
 
   div.prototip_Between[style],
   .borderBottom.borderRow,
   .borderTop.borderRow {
-      height: 0 !important;
+    height: 0 !important;
   }
 
   .prototip canvas {
-      background: transparent
+    background: transparent
   }
 
   /* Navigation & Footer */
   .siteHeader__topLine,
   .siteHeader__primaryNavSeparateLine,
   .footerContainer {
-      background: var(--bkg-nav)
+    background: var(--bkg-nav)
   }
 
   .primaryNavMenu--siteHeaderBrowseMenu .primaryNavMenu__menu,
@@ -195,7 +233,7 @@
   .genreButton:hover,
   .wantToReadMenu__shelfItem:hover,
   .wantToReadMenu__newShelfButtonContainer:hover {
-      background: var(--mine)
+    background: var(--mine)
   }
 
   .siteHeader__spotlight--browseMenu::before,
@@ -207,8 +245,8 @@
   .u-beigeBackground,
   .gr-bookSearchResults,
   .gr-newsfeedItem__details {
-      background: var(--cape-cod);
-      border-color: transparent;
+    background: var(--cape-cod);
+    border-color: transparent;
   }
 
   .featuredGenres__genreSpotlight::before,
@@ -228,28 +266,29 @@
   .greyBox,
   .contentBox,
   .feedFooterReadStatus .brown_comment,
-  .feedFooterReview .brown_comment {
-      background: var(--aztec)
+  .feedFooterReview .brown_comment,
+  #signedOutHome #discoveryBox {
+    background: var(--aztec)
   }
 
   .h1Shelf a:hover,
   .gr-bookSearchResults__item--active {
-      background: var(--corduroy)
+    background: var(--corduroy)
   }
 
   .answerButton:hover,
   .wantToReadMenu__exclusiveShelf {
-      color: white;
+    color: white;
   }
 
   .answerButton:hover,
   .wantToReadMenu__exclusiveShelf {
-      color: white;
+    color: white;
   }
 
   .gr-box--withShadow {
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
-      -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .gr-box--withShadowLarge,
@@ -258,8 +297,8 @@
   .gr-popover,
   .yearChallengeBooks .yearChallengeCovers .bookCover,
   .showUserChallengePage .yearChallengeCovers .bookCover {
-      box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.25), 1px 3px 6px rgba(0, 0, 0, 0.1);
-      -webkit-box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.25), 1px 3px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.25), 1px 3px 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.25), 1px 3px 6px rgba(0, 0, 0, 0.1);
   }
 
 
@@ -269,7 +308,7 @@
   /* Nav Link */
   .siteHeader__topLevelLink,
   .primaryNavMenu__trigger {
-      color: var(--txt-nav-link)
+    color: var(--txt-nav-link)
   }
 
   /* Nav Link Hover & Active */
@@ -284,7 +323,7 @@
   .mediumTabs .selectedTab,
   .bigTabs .selectedTab,
   .selectedTab.tabHeader {
-      background-color: var(--bkg-nav-link-hover) !important
+    background-color: var(--bkg-nav-link-hover) !important
   }
 
   /* LINK TEXT */
@@ -318,13 +357,13 @@
   .gr-annotatedBooksPage .annotatedBookItem__bookInfo__knhCta,
   .quizTitle,
   .js-readingNote .spoilerContainer__showLink {
-      color: var(--txt-link);
+    color: var(--txt-link);
   }
 
   /* SVG LINK */
   #rating_graph span,
   .rating_graph span svg g rect {
-      fill: var(--txt-link);
+    fill: var(--txt-link);
   }
 
   /* EXTRA BRIGHT LINKS */
@@ -333,7 +372,7 @@
   .correct a,
   .selectedShelf,
   a.gcaBookTitle--red {
-      color: var(--txt-link-bright)
+    color: var(--txt-link-bright)
   }
 
   /* MAIN TEXT */
@@ -372,11 +411,11 @@
   .yyibCtaBanner,
   .yearInBooksUserBlurb,
   .responsiveSiteFooterV2__heading {
-      color: var(--txt-main)
+    color: var(--txt-main)
   }
 
   .textColor {
-      color: var(--txt-main) !important
+    color: var(--txt-main) !important
   }
 
   /* SECONDARY TEXT */
@@ -427,8 +466,12 @@
   div .challenge-on-track,
   .gr-annotatedBooksPage .annotatedBookItem__bookInfo__bookTitle,
   .groupBook .meta .about .value,
-  .groupNav h3 {
-      color: var(--txt-second)
+  .groupNav h3,
+  #signedOutHome h2:first-child,
+  #signedOutHome h3:first-child,
+  #signedOutHome p:first-child,
+  #signedOutHome .discoveryBoxDiscovery .discoveryBoxResultBook .discoveryBoxResultDescriptors {
+    color: var(--txt-second)
   }
 
   /* GREY TEXT */
@@ -477,8 +520,9 @@
   .js-readingNote .noteHighlightContainer__location a,
   .js-readingNote .spoilerContainer__message,
   .communityQANewsfeedItem__spoilerWarning,
-  .groupBook .meta label, .groupBook .meta dt {
-      color: var(--txt-grey)
+  .groupBook .meta label,
+  .groupBook .meta dt {
+    color: var(--txt-grey)
   }
 
   /* Input & WHITE text*/
@@ -522,7 +566,7 @@
   .readingYearContent .standoutText,
   .readingYearContent .standoutNumber,
   .groupNav a.current {
-      color: white;
+    color: white;
   }
 
   /* Input */
@@ -533,22 +577,32 @@
   input[type="number"],
   input[type="password"],
   textarea,
+  input[type=text],
+  input[type=number],
+  input[type=search],
+  input[type=email],
+  input[type=number],
+  input[type=password],
   .contentBox input[type=text],
   .contentBox input[type=email],
   .contentBox input[type=password],
   .wtrButtonContainer .wtrNewUserStatus input,
   .wtrButtonContainer .wtrUserStatusConfirmation input,
-  .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText {
-      background-color: var(--cape-cod);
-      border-color: transparent;
-      color: white;
+  .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText,
+  #signedOutHome #sitesearch input,
+  #signedOutHome #navBar #signInForm input[type="email"],
+  #signedOutHome #navBar #signInForm input[type="text"],
+  #signedOutHome #navBar #signInForm input[type="password"] {
+    background-color: var(--cape-cod);
+    border-color: transparent;
+    color: white;
   }
 
   .wtrButtonContainer .wtrNewUserStatus input,
   .wtrButtonContainer .wtrUserStatusConfirmation input {
-      background-color: var(--cape-cod) !important;
-      border-color: transparent !important;
-      color: white !important;
+    background-color: var(--cape-cod) !important;
+    border-color: transparent !important;
+    color: white !important;
   }
 
   /* Focus Input Borders */
@@ -563,10 +617,14 @@
   .contentBox input[type=text]:focus,
   .contentBox input[type=email]:focus,
   .contentBox input[type=password]:focus,
-  .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText:focus {
-      background-color: var(--mine);
-      border-color: transparent;
-      box-shadow: none
+  .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText:focus,
+  #signedOutHome #sitesearch input:focus,
+  #signedOutHome #navBar #signInForm input[type="email"]:focus,
+  #signedOutHome #navBar #signInForm input[type="text"]:focus,
+  #signedOutHome #navBar #signInForm input[type="password"]:focus {
+    background-color: var(--mine);
+    border-color: transparent;
+    box-shadow: none
   }
 
   /* Cards - Feed / Progress update popup */
@@ -575,8 +633,8 @@
   div.navigationBox,
   #choiceBody .rightContainer,
   .longTextPopupForm {
-      background-color: var(--bkg-card);
-      border-color: var(--border);
+    background-color: var(--bkg-card);
+    border-color: var(--border);
   }
 
   /* Card Footer / Progress update popup header */
@@ -589,29 +647,30 @@
   .editorialCard,
   .readingYearContent .reviewDisplay,
   .responsiveSiteFooterV2 {
-      background-color: var(--bkg-card-foot);
-      border-color: var(--border);
+    background-color: var(--bkg-card-foot);
+    border-color: var(--border);
   }
 
   /* Progress update popup */
   .u-beigeBackground {
-      border-color: transparent
+    border-color: transparent
   }
 
   .longTextPopupForm {
-      border: 3px solid var(--border);
-      border-radius: 6px;
+    border: 3px solid var(--border);
+    border-radius: 6px;
   }
 
   .longTextPopupForm__header,
   .longTextPopupForm__remainingCharacterCount,
   .editorialCard__body,
   .gr-h2 {
-      color: var(--alabaster)
+    color: var(--alabaster)
   }
 
   /* Border Color */
-  hr, h1,
+  hr,
+  h1,
   .circularIcon--border,
   img.circularIcon--medium.circularIcon--border,
   .gr-commentForm__textarea,
@@ -674,8 +733,9 @@
   .readingNotesOwnerShareContainer,
   .readingNotesBookDetailsContainer,
   .js-readingNote,
-  .groupNav .actionLinkLites {
-      border-color: var(--border);
+  .groupNav .actionLinkLites,
+  #signedOutHome .featureTeaserBox .listTeaser {
+    border-color: var(--border);
   }
 
   #descriptionContainer,
@@ -683,7 +743,7 @@
   #nextGroupBooks .groupBook,
   #nextGroupBooks .boxHeader,
   #nextGroupBooks .boxFooter {
-      border-color: var(--border-bright);
+    border-color: var(--border-bright);
   }
 
   /* Tab navigation */
@@ -693,14 +753,15 @@
   .mediumTabs .selectedTab,
   .bigTabs .tab,
   .bigTabs .selectedTab {
-      border-color: var(--txt-link);
-      transition: all 0.2s ease-in-out
+    border-color: var(--txt-link);
+    transition: all 0.2s ease-in-out
   }
 
   .tabs .tab,
   .mediumTabs .tab,
-  .bigTabs .tab {
-      border-color: transparent
+  .bigTabs .tab,
+  #signInForm .gr-button.gr-button--dark {
+    border-color: transparent
   }
 
   .tabs .tab:hover,
@@ -709,12 +770,12 @@
   .tabs .selectedTab:hover,
   .bigTabs .selectedTab:hover,
   .mediumTabs .selectedTab:hover {
-      border-bottom: 2px solid var(--txt-link)
+    border-bottom: 2px solid var(--txt-link)
   }
 
   .wtrButtonContainer .wtrPrompt::before,
   .wtrButtonContainer .wtrPrompt::after {
-      border-color: var(--cape-cod) transparent
+    border-color: var(--cape-cod) transparent
   }
 
   /* Navigation box */
@@ -722,61 +783,61 @@
   div.navigationBox div.navRow a:hover,
   div.navigationBox div.navRow a.selected,
   div.navigationBox div.navRow a.selected:hover {
-      background: var(--mine);
+    background: var(--mine);
   }
 
   div.navigationBox div.navRow a:hover,
   div.navigationBox div.navRow a.selected,
   div.navigationBox div.navRow a.selected:hover {
-      padding-left: 10px;
-      left: 0;
-      width: 260px;
+    padding-left: 10px;
+    left: 0;
+    width: 260px;
   }
 
   div.navigationBox div.navRow:first-of-type a:hover,
   div.navigationBox div.navRow:first-of-type a.selected,
   div.navigationBox div.navRow:first-of-type a.selected:hover,
   .noteHighlightTextContainer .likeInformation {
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
   }
 
   div.navigationBox div.navRow:last-of-type a:hover,
   div.navigationBox div.navRow:last-of-type a.selected,
   div.navigationBox div.navRow:last-of-type a.selected:hover {
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
   }
 
   .prototip:not(.prototipAllowOverflow) .prototip_StemImage {
-      transform: rotate(90deg) translateY(-10px);
+    transform: rotate(90deg) translateY(-10px);
   }
 
   .prototip .goodreads,
   .prototip .goodreads .toolbar {
-      background: transparent
+    background: transparent
   }
 
   #books.table tbody tr {
-      border-top-color: var(--border);
-      border-bottom-color: var(--border);
+    border-top-color: var(--border);
+    border-bottom-color: var(--border);
   }
 
   /* User & Author icon images */
   .circularIcon--border {
-      background-color: var(--bkg-main);
-      border-color: var(--border-bright);
+    background-color: var(--bkg-main);
+    border-color: var(--border-bright);
   }
 
   .userRating__star,
   .choiceWidget__title {
-      background-color: transparent
+    background-color: transparent
   }
 
   /* PROGRESS BAR */
   progress[value] {
-      -webkit-appearance: none;
-      appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
   }
 
   /* Firefox */
@@ -785,14 +846,14 @@
   .readingTimeline__progressContainer,
   .graphContainer,
   .challengeProgress .graphContainer {
-      background: var(--green-shadow);
+    background: var(--green-shadow);
   }
 
   progress::-moz-progress-bar,
   .readingTimeline__progress,
   .graphBar,
   .readingTimeline__bullet {
-      background: var(--robin);
+    background: var(--robin);
   }
 
   /* Webkit */
@@ -801,14 +862,14 @@
   .graphContainer,
   .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphContainer,
   .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphContainerMobile {
-      background: var(--green-shadow);
+    background: var(--green-shadow);
   }
 
   progress[value]::-webkit-progress-value,
   .readingTimeline__progress,
   .graphBar,
   .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphBar {
-      background: var(--robin);
+    background: var(--robin);
   }
 
   /* Buttons */
@@ -826,15 +887,17 @@
   .tooltipTrigger .tooltip a.buttonBar,
   .tooltipTrigger .tooltip a.kcrPreviewButton,
   .tooltipTrigger .tooltip a.syncPreviewButton,
-  .js-readingNote .noteHighlightTextContainer__highlightText--highlighted>span {
-      background-color: var(--conch);
-      color: var(--space);
-      border-color: var(--border);
+  .js-readingNote .noteHighlightTextContainer__highlightText--highlighted>span,
+  #signedOutHome #newAccountBox .button,
+  .gr-button.gr-button--dark {
+    background-color: var(--conch);
+    color: var(--space);
+    border-color: var(--border);
   }
 
   html.desktop .wtrButtonContainer .wtrLeft.wtrDown,
   .js-readingNote .noteHighlightTextContainer__highlightText {
-      border-color: var(--conch)
+    border-color: var(--conch)
   }
 
   .gr-button:hover,
@@ -849,17 +912,19 @@
   .tooltipTriggerText .tooltip a.buttonBar:hover,
   .tooltipTrigger .tooltip a.buttonBar:hover,
   .tooltipTrigger .tooltip a.kcrPreviewButton:hover,
-  .tooltipTrigger .tooltip a.syncPreviewButton:hover {
-      background-color: var(--powder-ash);
+  .tooltipTrigger .tooltip a.syncPreviewButton:hover,
+  #signedOutHome #newAccountBox .button:hover,
+  .gr-button.gr-button--dark:hover {
+    background-color: var(--powder-ash);
   }
 
   .gr-button:disabled,
   .buttonToggle:disabled,
   .gr-form__submitButton:disabled {
-      background-color: var(--bkg-card);
-      color: var(--txt-grey);
-      border-color: var(--border);
-      cursor: default;
+    background-color: var(--bkg-card);
+    color: var(--txt-grey);
+    border-color: var(--border);
+    cursor: default;
   }
 
   .gr-button.gr-button--quiet,
@@ -867,25 +932,25 @@
   .gr-button--caretRight:hover,
   .gr-button.gr-button--small,
   .yearChallengeModule .viewChallenge {
-      color: var(--txt-second);
-      border-color: var(--border);
-      background-color: transparent;
+    color: var(--txt-second);
+    border-color: var(--border);
+    background-color: transparent;
   }
 
   .jobsValuesButton {
-      border: 2px solid var(--border)
+    border: 2px solid var(--border)
   }
 
   .jobsValuesButton:hover {
-      background-color: var(--border);
-      box-shadow: none;
+    background-color: var(--border);
+    box-shadow: none;
   }
 
   .gr-button.gr-button--quiet:hover,
   .gr-button.gr-button--small:hover {
-      color: #fff;
-      background-color: var(--bkg-nav-link-hover);
-      border-color: var(--bkg-nav-link-hover);
+    color: #fff;
+    background-color: var(--bkg-nav-link-hover);
+    border-color: var(--bkg-nav-link-hover);
   }
 
   .button,
@@ -902,14 +967,14 @@
   .legacyWantToReadButton .button .smallButton,
   .friendFollowButton--dark,
   .readingNotes__HelpTip {
-      background: var(--bkg-button);
-      color: var(--txt-button);
-      border-color: var(--border);
+    background: var(--bkg-button);
+    color: var(--txt-button);
+    border-color: var(--border);
   }
 
   .dropdown--wantToReadMenu,
   .wtrButtonContainer .wtrRight {
-      border-left-color: var(--neptune) !important;
+    border-left-color: var(--neptune) !important;
   }
 
   .wantToReadButton__leftUnshelved:hover,
@@ -919,14 +984,14 @@
   html.desktop .wtrButtonContainer .wtrRight.wtrUp:hover,
   .legacyWantToReadButton .button:hover,
   .friendFollowButton--dark:hover {
-      background: var(--bkg-button-hover);
+    background: var(--bkg-button-hover);
   }
 
   .wantToReadButton__leftUnshelvedButton,
   .wantToReadButton__leftUnshelvedButton:hover,
   .friendFollowButton--dark,
   .jobsValuesButton {
-      color: var(--txt-button);
+    color: var(--txt-button);
   }
 
 
@@ -936,14 +1001,15 @@
   .noticeBox ol,
   .noticeBox p,
   .noticeBox td,
-  .noticeBox th {
-      color: var(--space)
+  .noticeBox th,
+  #signedOutHome #masthead #newAccountBox h2 {
+    color: var(--space)
   }
 
   .noticeBox {
-      background: var(--mint-ice);
-      border: 3px solid var(--green-shadow);
-      border-radius: 6px;
+    background: var(--mint-ice);
+    border: 3px solid var(--green-shadow);
+    border-radius: 6px;
   }
 
   /*
@@ -954,26 +1020,26 @@
   /* author name */
   .communityQABookInfo .authorInfoAndActions .authorName,
   .wtrButtonContainer .wtrLeft.wtrDown .gr-form.gr-form--compact {
-      color: var(--txt-main);
+    color: var(--txt-main);
   }
 
   .communityQuestion .fullQuestionBody,
   .jobsValuesBox {
-      background-color: var(--aztec)
+    background-color: var(--aztec)
   }
 
   .communityQuestion .triangle {
-      border-color: var(--aztec) transparent transparent transparent
+    border-color: var(--aztec) transparent transparent transparent
   }
 
   ul.communityQAFooter.answerFooter .footerItem.comment a,
   .qaInfoModule a {
-      color: var(--txt-link)
+    color: var(--txt-link)
   }
 
   .gr-form__secondaryAction,
   .gr-form--compact__secondaryAction {
-      color: var(--txt-grey)
+    color: var(--txt-grey)
   }
 
   /*
@@ -985,14 +1051,14 @@
   .gr-newsfeedItem,
   .gr-newsfeedItem__details,
   .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText.noEdit {
-      border-radius: 10px;
-      padding: 1rem 0.75rem 0;
-      border: 0;
+    border-radius: 10px;
+    padding: 1rem 0.75rem 0;
+    border: 0;
   }
 
   /* card author icon */
   .gr-newsfeedItem__headerIcon {
-      margin-left: -2.15rem;
+    margin-left: -2.15rem;
   }
 
   /*----------
@@ -1016,17 +1082,18 @@
   .gr-newsfeedItem__details,
   .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText.noEdit,
   .communityQANewsfeedItem__question {
-      border-radius: 6px;
+    border-radius: 6px;
   }
 
   .readingYearContent .readingChallengeWidget .readingChallengeBanner .bannerYear,
-  .folder .brownBox, .tableList th {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+  .folder .brownBox,
+  .tableList th {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .gr-book {
-      margin-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
   }
 
   /* card footer width expansion */
@@ -1034,44 +1101,45 @@
   .gr-newsfeedItem__footer .gr-comments,
   .gr-newsfeedItem__footer,
   .gr-commentForm {
-      width: calc(100% + 0.25rem);
-      margin-left: -0.75rem;
-      padding: 0 0.25rem 1rem 0.75rem;
-      border: 0;
+    width: calc(100% + 0.25rem);
+    margin-left: -0.75rem;
+    padding: 0 0.25rem 1rem 0.75rem;
+    border: 0;
   }
 
   .likeInformation,
   .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText.noEdit {
-      padding-top: 1rem;
-      padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
   }
 
   .noteHighlightTextContainer .likeInformation,
   .noteHighlightTextContainer .gr-commentForm {
-      width: unset;
-      margin-left: unset;
-      padding-left: 8px;
+    width: unset;
+    margin-left: unset;
+    padding: 8px;
   }
 
   .gr-comments__seeAllLinkBox {
-      margin-top: -0.5rem
+    margin-top: -0.5rem
   }
+
   .noteHighlightTextContainer .gr-comments__seeAllLinkBox {
     margin-top: 0
   }
 
   .gr-newsfeedItem__footer {
-      margin: 0 -0.75rem;
-      padding: 0 0.75rem;
+    margin: 0 -0.75rem;
+    padding: 0 0.75rem;
   }
 
   .gr-newsfeedItem__footer .gr-comments {
-      width: calc(100% + 0.25rem);
+    width: calc(100% + 0.25rem);
   }
 
   .gr-commentForm {
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   /* list tweaks */
@@ -1080,19 +1148,19 @@
   .quote,
   .brownBox,
   .newsMainContent.mainContentFloat {
-      padding: 1rem 0.5rem;
+    padding: 1rem 0.5rem;
   }
 
   .brownBox {
-      padding: 0.5rem;
-      border-radius: 6px
+    padding: 0.5rem;
+    border-radius: 6px
   }
 
   .img,
   .blogWidth,
   .twoAcross,
   .headerImage {
-      border-radius: 3px
+    border-radius: 3px
   }
 
   /* border removal */
@@ -1109,7 +1177,7 @@
   .shareBarContainerLast,
   .shareBarContainerDarkBorder,
   .wtrButtonContainer .wtrPrompt input[pattern="\\d*"] {
-      border: 0;
+    border: 0;
   }
 
   /* box-shadow removal */
@@ -1118,25 +1186,25 @@
   .jobsValuesBox,
   .jobsValuesButton,
   .mainContentContainer#topLanding {
-      box-shadow: none;
-      -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
   }
 
   main {
-      padding-top: 1rem
+    padding-top: 1rem
   }
 
   .distractionless #header {
-      margin-bottom: 0
+    margin-bottom: 0
   }
 
   div.bannerYear[style] {
-      background-color: var(--elm) !important
+    background-color: var(--elm) !important
   }
 
   /* Best of Lists */
   .gcaDivider,
   .gcaDivider__centerpiece {
-      height: 0
+    height: 0
   }
 }

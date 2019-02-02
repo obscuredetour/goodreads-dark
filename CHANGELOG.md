@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.7.4] - 2019-02-02
+### Added
+- *Signed out* page themed accordingly.
+
+### Changed
+- Default screenshots changed to newly themed *Signed out* page.
+
 ## [1.7.3] - 2019-01-30
 ### Changed
 - Default is now zero saturation.
