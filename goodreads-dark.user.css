@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Goodreads dark (Jade) theme
 @namespace   https://github.com/obscuredetour/
-@version     1.7.4
+@version     1.7.5
 @license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
@@ -133,6 +133,9 @@
   .dropdown__trigger--profileMenu .headerPersonalNav__icon {
     filter: unset
   }
+  .gr-iconButton img[src*="close"] img {
+    filter: brightness(2)
+  }
 
   #signedOutHome .discoveryBoxDiscovery {
     background-image:
@@ -157,7 +160,8 @@
   .wtrButtonContainer .wtrPrompt input[pattern="\\d*"],
   #fav_authors .section,
   .gcaRightContainer,
-  .gr-contentBoxMargin--large {
+  .gr-contentBoxMargin--large,
+  .modal__content {
     background-color: var(--raven);
     color: var(--txt-second);
     border-color: var(--border);
@@ -946,7 +950,8 @@
   }
 
   .gr-button.gr-button--quiet:hover,
-  .gr-button.gr-button--small:hover {
+  .gr-button.gr-button--small:hover,
+  .button.orange:hover {
     color: #fff;
     background-color: var(--bkg-nav-link-hover);
     border-color: var(--bkg-nav-link-hover);
@@ -965,7 +970,8 @@
   .legacyWantToReadButton .button,
   .legacyWantToReadButton .button .smallButton,
   .friendFollowButton--dark,
-  .readingNotes__HelpTip {
+  .readingNotes__HelpTip,
+  .button.orange {
     background: var(--bkg-button);
     color: var(--txt-button);
     border-color: var(--border);
@@ -1001,11 +1007,13 @@
   .noticeBox p,
   .noticeBox td,
   .noticeBox th,
-  #signedOutHome #masthead #newAccountBox h2 {
+  #signedOutHome #masthead #newAccountBox h2,
+  #connectPrompt .connectPromptHolder {
     color: var(--space)
   }
 
-  .noticeBox {
+  .noticeBox,
+  #connectPrompt .connectPromptHolder {
     background: var(--mint-ice);
     border: 3px solid var(--green-shadow);
     border-radius: 6px;

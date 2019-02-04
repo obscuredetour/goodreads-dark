@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.7.5] - 2019-02-02
+### Added
+- Log in modal and 'Join Goodreads' notice box themed.
+
 ## [1.7.4] - 2019-02-02
 ### Added
 - *Signed out* page themed accordingly.
