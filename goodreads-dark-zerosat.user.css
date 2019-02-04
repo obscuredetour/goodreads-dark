@@ -126,7 +126,7 @@
     filter: invert(1)
   }
 
-  .brownBox a[id*='folder_'] img {
+  .brownBox a[id*='folder_'] img, a img[src*='arrow'] {
     filter: invert(0.75)
   }
 
@@ -150,6 +150,26 @@
       url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAASCAYAAACaV7S8AAAALElEQVQIW2P4DwRMnz48YWBiAAIIwcjIBCIYgVw4CyLGAGOhSyApBpoBMhQAWY0LCsZmAMgAAAAASUVORK5CYII%3D);
     background-blend-mode: saturation;
   }
+
+  /* Book Shelf Settings */
+  .listViewIcon.selected, .listViewIcon:hover {
+    background:
+      linear-gradient(var(--mystic), var(--mystic)),
+      url("layout/list_selected.png") no-repeat;
+  }
+  .gridViewIcon.selected, .gridViewIcon:hover {
+    background:
+      linear-gradient(var(--mystic), var(--mystic)),
+      url("layout/grid_selected.png") no-repeat;
+  }
+  .listViewIcon img, .gridViewIcon img {
+    right: 3px;
+    filter: invert(1) brightness(1.5);
+  }
+  .myBooksNav ul li {
+    display: inline-block;
+  }
+  .controlGroup a.controlLink.open { padding-bottom: 14px }
 
   /* tool tips */
   .tooltipTriggerText .tooltip,
@@ -235,7 +255,8 @@
   .bigTabs .tab,
   .genreButton:hover,
   .wantToReadMenu__shelfItem:hover,
-  .wantToReadMenu__newShelfButtonContainer:hover {
+  .wantToReadMenu__newShelfButtonContainer:hover,
+  .controlGroup .open, .controlBody {
     background: var(--mine)
   }
 
@@ -473,7 +494,8 @@
   #signedOutHome h2:first-child,
   #signedOutHome h3:first-child,
   #signedOutHome p:first-child,
-  #signedOutHome .discoveryBoxDiscovery .discoveryBoxResultBook .discoveryBoxResultDescriptors {
+  #signedOutHome .discoveryBoxDiscovery .discoveryBoxResultBook .discoveryBoxResultDescriptors,
+  .controlGroup .open, .controlBody {
     color: var(--txt-second)
   }
 
@@ -580,6 +602,10 @@
   input[type="number"],
   input[type="password"],
   textarea,
+  select,
+  input[type=checkbox],
+  input[type=radio],
+  .inlineFormField,
   input[type=text],
   input[type=number],
   input[type=search],
@@ -617,6 +643,10 @@
   input[type="number"]:focus,
   input[type="password"]:focus,
   textarea:focus,
+  select:focus,
+  input[type=checkbox]:focus,
+  input[type=radio]:focus,
+  .inlineFormField:focus,
   .contentBox input[type=text]:focus,
   .contentBox input[type=email]:focus,
   .contentBox input[type=password]:focus,
@@ -745,7 +775,8 @@
   .readingTimeline__text,
   #nextGroupBooks .groupBook,
   #nextGroupBooks .boxHeader,
-  #nextGroupBooks .boxFooter {
+  #nextGroupBooks .boxFooter,
+  .toolset {
     border-color: var(--border-bright);
   }
 
@@ -848,7 +879,8 @@
   progress,
   .readingTimeline__progressContainer,
   .graphContainer,
-  .challengeProgress .graphContainer {
+  .challengeProgress .graphContainer,
+  .barchart {
     background: var(--green-shadow);
   }
 
@@ -871,8 +903,14 @@
   progress[value]::-webkit-progress-value,
   .readingTimeline__progress,
   .graphBar,
-  .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphBar {
+  .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphBar, .datum {
     background: var(--robin);
+  }
+  .left.data:hover .barchart {
+    background: var(--conch);
+  }
+  .left.data:hover .datum {
+    background: var(--elm);
   }
 
   /* Buttons */
@@ -892,7 +930,8 @@
   .tooltipTrigger .tooltip a.syncPreviewButton,
   .js-readingNote .noteHighlightTextContainer__highlightText--highlighted>span,
   #signedOutHome #newAccountBox .button,
-  .gr-button.gr-button--dark {
+  .gr-button.gr-button--dark,
+  .buttons .button {
     background-color: var(--conch);
     color: var(--space);
     border-color: var(--border);
@@ -917,7 +956,9 @@
   .tooltipTrigger .tooltip a.kcrPreviewButton:hover,
   .tooltipTrigger .tooltip a.syncPreviewButton:hover,
   #signedOutHome #newAccountBox .button:hover,
-  .gr-button.gr-button--dark:hover {
+  .gr-button.gr-button--dark:hover,
+  .buttons .button:hover,
+  .buttons .button.selected {
     background-color: var(--powder-ash);
   }
 
@@ -1166,7 +1207,8 @@
   .img,
   .blogWidth,
   .twoAcross,
-  .headerImage {
+  .headerImage,
+  .controlBody {
     border-radius: 3px
   }
 
@@ -1183,7 +1225,8 @@
   .shareBarContainer,
   .shareBarContainerLast,
   .shareBarContainerDarkBorder,
-  .wtrButtonContainer .wtrPrompt input[pattern="\\d*"] {
+  .wtrButtonContainer .wtrPrompt input[pattern="\\d*"],
+  .controlGroup .open, .controlBody {
     border: 0;
   }
 

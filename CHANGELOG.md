@@ -1,7 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [1.7.5] - 2019-02-02
+## [1.7.6] - 2019-02-04
+### Added
+- Book shelf settings, buttons, arrow icons, & stats themed.
+
+## [1.7.5] - 2019-02-04
 ### Added
 - Log in modal and 'Join Goodreads' notice box themed.
 
