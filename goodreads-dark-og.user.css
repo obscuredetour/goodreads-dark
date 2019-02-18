@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Goodreads dark (Jade-OG) theme
 @namespace   https://github.com/obscuredetour/
-@version     1.7.5
+@version     1.7.7
 @license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
@@ -123,7 +123,8 @@
   /* Social icons */
   .gr-footer__socialLink img,
   .gr-h1 img,
-  .responsiveSiteFooterV2__socialLink img {
+  .responsiveSiteFooterV2__socialLink img,
+  .responsiveSiteFooter__socialLink img {
     filter: invert(1)
   }
 
@@ -136,6 +137,9 @@
   }
   .gr-iconButton img[src*="close"] img {
     filter: brightness(2)
+  }
+  .gr-shareButton__icon {
+    filter: brightness(185%) hue-rotate(-12deg) saturate(34%)
   }
 
   #signedOutHome .discoveryBoxDiscovery {
@@ -381,7 +385,8 @@
   .userComment,
   .gr-annotatedBooksPage .annotatedBookItem__bookInfo__knhCta,
   .quizTitle,
-  .js-readingNote .spoilerContainer__showLink {
+  .js-readingNote .spoilerContainer__showLink,
+  .responsiveSiteFooter__link {
     color: var(--txt-link);
   }
 
@@ -435,7 +440,9 @@
   #fav_authors .title a,
   .yyibCtaBanner,
   .yearInBooksUserBlurb,
-  .responsiveSiteFooterV2__heading {
+  .responsiveSiteFooterV2__heading,
+  .responsiveSiteFooter__heading,
+  .bookMeta .value, .keyValue .value {
     color: var(--txt-main)
   }
 
@@ -547,7 +554,9 @@
   .js-readingNote .spoilerContainer__message,
   .communityQANewsfeedItem__spoilerWarning,
   .groupBook .meta label,
-  .groupBook .meta dt {
+  .groupBook .meta dt,
+  .bookMeta, .keyValue,
+  .sharePreview__description {
     color: var(--txt-grey)
   }
 
@@ -680,7 +689,7 @@
   .u-beigeBackground,
   .editorialCard,
   .readingYearContent .reviewDisplay,
-  .responsiveSiteFooterV2 {
+  .responsiveSiteFooter, .responsiveSiteFooterV2 {
     background-color: var(--bkg-card-foot);
     border-color: var(--border);
   }
@@ -768,7 +777,9 @@
   .readingNotesBookDetailsContainer,
   .js-readingNote,
   .groupNav .actionLinkLites,
-  #signedOutHome .featureTeaserBox .listTeaser {
+  #signedOutHome .featureTeaserBox .listTeaser,
+  .shareModal__previewContainer,
+  .shareModal__bottomContainer--social {
     border-color: var(--border);
   }
 
@@ -1130,14 +1141,26 @@
   .gr-editorialBlogPost__image,
   .gr-newsfeedItem__details,
   .js-readingNote .noteHighlightTextContainer__noteContainer .noteContainer__noteText.noEdit,
-  .communityQANewsfeedItem__question {
+  .communityQANewsfeedItem__question,
+  .siteAnnouncement,
+  .siteAnnouncement__masthead img,
+  .shareModal__previewContainer,
+  .editorialCard,
+  .editorialCard img {
     border-radius: 6px;
   }
 
   .readingYearContent .readingChallengeWidget .readingChallengeBanner .bannerYear,
   .folder .brownBox,
-  .tableList th {
+  .tableList th,
+  .siteAnnouncement__masthead img,
+  .editorialCard img {
     border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .editorialCard .editorialCard__image--left img {
+    border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
@@ -1209,7 +1232,8 @@
   .blogWidth,
   .twoAcross,
   .headerImage,
-  .controlBody {
+  .controlBody,
+  .gr-mediaFlexbox__media {
     border-radius: 3px
   }
 
@@ -1227,7 +1251,8 @@
   .shareBarContainerLast,
   .shareBarContainerDarkBorder,
   .wtrButtonContainer .wtrPrompt input[pattern="\\d*"],
-  .controlGroup .open, .controlBody {
+  .controlGroup .open, .controlBody,
+  .siteAnnouncement {
     border: 0;
   }
 
@@ -1258,4 +1283,12 @@
   .gcaDivider__centerpiece {
     height: 0
   }
+
+  /* Remove top banner */
+  /* .siteHeader__topFullImageContainer { display: none; }
+  html.withSiteHeaderTopFullImage .siteHeaderBottomSpacer {
+    padding-bottom: 3rem;
+  }
+  html.withSiteHeaderTopFullImage .primaryNavMenu__menu,
+  html.withSiteHeaderTopFullImage .dropdown__menu--profileMenu, html.withSiteHeaderTopFullImage .dropdown__menu--siteHeader { top: initial } */
 }

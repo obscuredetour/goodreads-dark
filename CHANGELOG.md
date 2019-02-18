@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.7.7] - 2019-02-18
+### Added
+- New footer introduced, themed accordingly.
+- Themed 'share' modal.
+- Themed 'share' icon.
+
+### Changed
+- News & Interview article cards fixed.
+
 ## [1.7.6] - 2019-02-04
 ### Added
 - Book shelf settings, buttons, arrow icons, & stats themed.
