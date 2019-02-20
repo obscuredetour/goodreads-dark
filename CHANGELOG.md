@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.7.8] - 2019-02-19
+### Changed
+- Fixed spoiler text colors.
+- Tweaked News & Interview pages for better readability.
+
+### Added
+- Book review modal themed.
+
 ## [1.7.7] - 2019-02-18
 ### Added
 - New footer introduced, themed accordingly.

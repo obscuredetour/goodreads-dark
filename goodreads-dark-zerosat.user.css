@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Goodreads dark (Jade) theme
 @namespace   https://github.com/obscuredetour/
-@version     1.7.7
+@version     1.7.8
 @license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
@@ -70,7 +70,8 @@
   #editFavGenres .recsNotice,
   .newsHeader,
   .aboutRightColumnWide section,
-  .aboutRightColumnWide section h2 {
+  .aboutRightColumnWide section h2,
+  #box #boxContents {
     background-color: var(--bkg-main);
     color: var(--txt-second);
   }
@@ -127,16 +128,19 @@
     filter: invert(1)
   }
 
-  .brownBox a[id*='folder_'] img, a img[src*='arrow'] {
+  .brownBox a[id*='folder_'] img,
+  a img[src*='arrow'] {
     filter: invert(0.75)
   }
 
   .dropdown__trigger--profileMenu .headerPersonalNav__icon {
     filter: unset
   }
+
   .gr-iconButton img[src*="close"] img {
     filter: brightness(2)
   }
+
   .gr-shareButton__icon {
     filter: brightness(185%) hue-rotate(-12deg) saturate(34%)
   }
@@ -155,25 +159,57 @@
     background-blend-mode: saturation;
   }
 
+  .reviewFormRereading table tr td .readingSessionDatePicker.smallPicker,
+  .reviewFormCurrentlyReading table tr td .readingSessionDatePicker.smallPicker,
+  .reviewFormRereading table tr td .readingSessionDatePicker.largePicker,
+  .reviewFormCurrentlyReading table tr td .readingSessionDatePicker.largePicker {
+    position: relative;
+    background: unset;
+  }
+
+  .reviewFormRereading table tr td .readingSessionDatePicker.smallPicker::after,
+  .reviewFormCurrentlyReading table tr td .readingSessionDatePicker.smallPicker::after,
+  .reviewFormRereading table tr td .readingSessionDatePicker.largePicker::after,
+  .reviewFormCurrentlyReading table tr td .readingSessionDatePicker.largePicker::after {
+    border-color: var(--txt-grey) transparent;
+    border-style: solid;
+    border-width: 4px 4px 0px 4px;
+    height: 0px;
+    width: 0px;
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 6px;
+  }
+
   /* Book Shelf Settings */
-  .listViewIcon.selected, .listViewIcon:hover {
+  .listViewIcon.selected,
+  .listViewIcon:hover {
     background:
       linear-gradient(var(--mystic), var(--mystic)),
       url("layout/list_selected.png") no-repeat;
   }
-  .gridViewIcon.selected, .gridViewIcon:hover {
+
+  .gridViewIcon.selected,
+  .gridViewIcon:hover {
     background:
       linear-gradient(var(--mystic), var(--mystic)),
       url("layout/grid_selected.png") no-repeat;
   }
-  .listViewIcon img, .gridViewIcon img {
+
+  .listViewIcon img,
+  .gridViewIcon img {
     right: 3px;
     filter: invert(1) brightness(1.5);
   }
+
   .myBooksNav ul li {
     display: inline-block;
   }
-  .controlGroup a.controlLink.open { padding-bottom: 14px }
+
+  .controlGroup a.controlLink.open {
+    padding-bottom: 14px
+  }
 
   /* tool tips */
   .tooltipTriggerText .tooltip,
@@ -260,7 +296,8 @@
   .genreButton:hover,
   .wantToReadMenu__shelfItem:hover,
   .wantToReadMenu__newShelfButtonContainer:hover,
-  .controlGroup .open, .controlBody {
+  .controlGroup .open,
+  .controlBody {
     background: var(--mine)
   }
 
@@ -441,7 +478,8 @@
   .yearInBooksUserBlurb,
   .responsiveSiteFooterV2__heading,
   .responsiveSiteFooter__heading,
-  .bookMeta .value, .keyValue .value {
+  .bookMeta .value,
+  .keyValue .value {
     color: var(--txt-main)
   }
 
@@ -502,7 +540,12 @@
   #signedOutHome h3:first-child,
   #signedOutHome p:first-child,
   #signedOutHome .discoveryBoxDiscovery .discoveryBoxResultBook .discoveryBoxResultDescriptors,
-  .controlGroup .open, .controlBody {
+  .controlGroup .open,
+  .controlBody,
+  .communityAnswerText .spoiler .spoilerAnswerText,
+  .questionText .spoiler .spoilerAnswerText,
+  .communityQuestionText .spoiler .spoilerAnswerText,
+  .newsfeedItemAnswerText .spoiler .spoilerAnswerText {
     color: var(--txt-second)
   }
 
@@ -554,7 +597,8 @@
   .communityQANewsfeedItem__spoilerWarning,
   .groupBook .meta label,
   .groupBook .meta dt,
-  .bookMeta, .keyValue,
+  .bookMeta,
+  .keyValue,
   .sharePreview__description {
     color: var(--txt-grey)
   }
@@ -630,7 +674,11 @@
   #signedOutHome #sitesearch input,
   #signedOutHome #navBar #signInForm input[type="email"],
   #signedOutHome #navBar #signInForm input[type="text"],
-  #signedOutHome #navBar #signInForm input[type="password"] {
+  #signedOutHome #navBar #signInForm input[type="password"],
+  .shelfChooser .chooseShelvesLink,
+  .shelfChooser .shelfChooserWrapper,
+  .reviewFormRereading table tr td .readingSessionDatePicker select,
+  .reviewFormCurrentlyReading table tr td .readingSessionDatePicker select {
     background-color: var(--cape-cod);
     border-color: transparent;
     color: white;
@@ -688,7 +736,8 @@
   .u-beigeBackground,
   .editorialCard,
   .readingYearContent .reviewDisplay,
-  .responsiveSiteFooter, .responsiveSiteFooterV2 {
+  .responsiveSiteFooter,
+  .responsiveSiteFooterV2 {
     background-color: var(--bkg-card-foot);
     border-color: var(--border);
   }
@@ -787,7 +836,10 @@
   #nextGroupBooks .groupBook,
   #nextGroupBooks .boxHeader,
   #nextGroupBooks .boxFooter,
-  .toolset {
+  .toolset,
+  .reviewFormEdit .separator,
+  .reviewFormRereading table tr td .pickerDivider,
+  .reviewFormCurrentlyReading table tr td .pickerDivider {
     border-color: var(--border-bright);
   }
 
@@ -805,7 +857,21 @@
   .tabs .tab,
   .mediumTabs .tab,
   .bigTabs .tab,
-  #signInForm .gr-button.gr-button--dark {
+  #signInForm .gr-button.gr-button--dark,
+  .reviewFormRereading table tr td .startedAtMonth,
+  .reviewFormRereading table tr td .endedAtMonth,
+  .reviewFormCurrentlyReading table tr td .startedAtMonth,
+  .reviewFormCurrentlyReading table tr td .endedAtMonth,
+  .reviewFormRereading table tr td .readingSessionDatePicker select,
+  .reviewFormCurrentlyReading table tr td .readingSessionDatePicker select,
+  .reviewFormRereading table tr td .startedAtDay,
+  .reviewFormRereading table tr td .endedAtDay,
+  .reviewFormCurrentlyReading table tr td .startedAtDay,
+  .reviewFormCurrentlyReading table tr td .endedAtDay,
+  .reviewFormRereading table tr td .startedAtYear,
+  .reviewFormRereading table tr td .endedAtYear,
+  .reviewFormCurrentlyReading table tr td .startedAtYear,
+  .reviewFormCurrentlyReading table tr td .endedAtYear {
     border-color: transparent
   }
 
@@ -914,12 +980,15 @@
   progress[value]::-webkit-progress-value,
   .readingTimeline__progress,
   .graphBar,
-  .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphBar, .datum {
+  .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphBar,
+  .datum {
     background: var(--robin);
   }
+
   .left.data:hover .barchart {
     background: var(--conch);
   }
+
   .left.data:hover .datum {
     background: var(--elm);
   }
@@ -1145,7 +1214,9 @@
   .siteAnnouncement__masthead img,
   .shareModal__previewContainer,
   .editorialCard,
-  .editorialCard img {
+  .editorialCard img,
+  #box,
+  #box #boxContents {
     border-radius: 6px;
   }
 
@@ -1250,7 +1321,8 @@
   .shareBarContainerLast,
   .shareBarContainerDarkBorder,
   .wtrButtonContainer .wtrPrompt input[pattern="\\d*"],
-  .controlGroup .open, .controlBody,
+  .controlGroup .open,
+  .controlBody,
   .siteAnnouncement {
     border: 0;
   }
@@ -1281,6 +1353,23 @@
   .gcaDivider,
   .gcaDivider__centerpiece {
     height: 0
+  }
+
+  /* News & Interviews tweaks */
+  .newsMainContent.mainContentFloat,
+  #box {
+    background: transparent;
+  }
+
+  /* Revert serif to sans-serif */
+  .newsContainer,
+  .comment .reviewText {
+    font-family: "Lato", "Helvetica Neue", "Helvetica", -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif
+  }
+
+  #box #boxContents {
+    margin-top: 0;
+    padding-top: 22px;
   }
 
   /* Remove top banner */
