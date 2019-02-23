@@ -1,6 +1,19 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.7.9] - 2019-02-22
+### Added
+- Created new base64 images for input radio and check boxes.
+
+### Changed
+- 'Edit Shelves' page now uses new base64 themed images. Bumped up font size in table.
+- Tooltip popup fixes! (hover/active state over actionable items)
+  - Recommended books, right side of page (when viewing a book), under 'Readers Also Enjoyed'
+  - When editing book status, also updated to new base64 themed images.
+  - When editing book read status.
+- Fixed Community question pages.
+- Tweaked styling for review comments. Input field now visible, border radius matches rest of theme.
+
 ## [1.7.8] - 2019-02-19
 ### Changed
 - Fixed spoiler text colors.
