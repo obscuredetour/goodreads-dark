@@ -83,9 +83,9 @@ Open an issue first to discuss potential changes/additions.
 ![Jade color scheme](images/jade-palette.png)
 *Image created in [Color Deck](https://color.obscuredetour.com)*
 
-### Background & text colors
+<!-- ### Background & text colors
 ![Jade color scheme](images/jade-palette_bkg-txt.png)
-*Image created in [Color Deck](https://color.obscuredetour.com)*
+*Image created in [Color Deck](https://color.obscuredetour.com)* -->
 
 **[Back to top](#table-of-contents)**
 
