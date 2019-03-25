@@ -1535,6 +1535,14 @@
   .shelfChooser input[type=text] {
     background-color: var(--asher)
   }
+  
+  .gr-childNewsfeedItem__header{
+    background-color: #212121;
+  }
+
+  .gr-childNewsfeedItem__header{
+    border: none;
+  }
 
   /* Remove top banner */
   /* .siteHeader__topFullImageContainer { display: none; }
