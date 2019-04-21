@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Goodreads dark (Jade) theme
 @namespace   https://github.com/obscuredetour/
-@version     1.7.9
+@version     1.8.0
 @license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
@@ -863,7 +863,8 @@
   .siteAnnouncement,
   div.navigationBox,
   #choiceBody .rightContainer,
-  .longTextPopupForm {
+  .longTextPopupForm,
+  .gr-childNewsfeedItem__header {
     background-color: var(--bkg-card);
     border-color: var(--border);
   }
@@ -881,6 +882,23 @@
   .responsiveSiteFooterV2 {
     background-color: var(--bkg-card-foot);
     border-color: var(--border);
+  }
+
+  /* Child News Feed Item (Author update/likes a post) */
+  .gr-childNewsfeedItem__header {
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .gr-childNewsfeedItem__header::after { border-color: var(--border) }
+  .newsfeedNoteHighlightTextContainer__highlightText span {
+    padding: 0.25rem 0.25rem 0.25rem 0;
+    box-shadow: -0.25rem 0 0 var(--conch);
+  }
+
+  .gr-newsfeedItem.gr-mediaBox.gr-childNewsfeedItemContainer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   /* Progress update popup */
@@ -983,7 +1001,8 @@
   .toolset,
   .reviewFormEdit .separator,
   .reviewFormRereading table tr td .pickerDivider,
-  .reviewFormCurrentlyReading table tr td .pickerDivider {
+  .reviewFormCurrentlyReading table tr td .pickerDivider,
+  .newsfeedNoteHighlightTextContainer--withBorder {
     border-color: var(--border-bright);
   }
 
@@ -1153,6 +1172,7 @@
   .tooltipTrigger .tooltip a.kcrPreviewButton,
   .tooltipTrigger .tooltip a.syncPreviewButton,
   .js-readingNote .noteHighlightTextContainer__highlightText--highlighted>span,
+  .newsfeedNoteHighlightTextContainer__highlightText span,
   #signedOutHome #newAccountBox .button,
   .gr-button.gr-button--dark,
   .buttons .button {
@@ -1362,7 +1382,8 @@
   .editorialCard img,
   #box,
   #box #boxContents,
-  .communityQuestion .fullQuestionBody {
+  .communityQuestion .fullQuestionBody,
+  .newsfeedNoteHighlightTextContainer--withBorder {
     border-radius: 6px;
   }
 

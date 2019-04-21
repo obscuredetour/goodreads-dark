@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.8.0] - 2019-04-21
+### Changed
+- Fixed white bkg News Feed Item w/ Author comment or like present.
+- Altered inline text highlight on news feed not colored correctly.
+
 ## [1.7.9] - 2019-02-22
 ### Added
 - Created new base64 images for input radio and check boxes.
