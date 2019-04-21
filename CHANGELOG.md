@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Fixed white bkg News Feed Item w/ Author comment or like present.
 - Altered inline text highlight on news feed not colored correctly.
+- Fixed UserCSS auto update.
+- Removed zerosat file since auto update never worked (oops).
+- Updated bookshelf .png buttons to absolute URLs.
 
 ## [1.7.9] - 2019-02-22
 ### Added

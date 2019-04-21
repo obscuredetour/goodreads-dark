@@ -300,13 +300,13 @@
   .listViewIcon.selected,
   .listViewIcon:hover {
     background: linear-gradient(var(--mystic), var(--mystic)),
-      url("layout/list_selected.png") no-repeat;
+      url("https://s.gr-assets.com/assets/layout/list_selected.png") no-repeat;
   }
 
   .gridViewIcon.selected,
   .gridViewIcon:hover {
     background: linear-gradient(var(--mystic), var(--mystic)),
-      url("layout/grid_selected.png") no-repeat;
+      url("https://s.gr-assets.com/assets/layout/grid_selected.png") no-repeat;
   }
 
   .listViewIcon img,
