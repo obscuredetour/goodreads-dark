@@ -16,15 +16,17 @@
 This is a dark theme for the [goodreads.com](https://www.goodreads.com) website. This custom userstyle follows [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) guidelines.
 
 ### 2 versions
-**Default**
+**Dark Jade Default**
+
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark.user.css)
 
-Default is now the [-Zero saturation version](#dark-jade-default). It keeps the accent colors the same but zeros out the saturation on the backgrounds making it more grey. The `zerosat` file will remain for users who have this installed.
+The default Dark Jade theme colors can be [seen here](#dark-jade-default). Accent colors are green (jade) and background colors are dark grey.
 
-**Jade (OG)**
+**Dark Jade (OG)**
+
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark-og.user.css)
 
-Jade (OG) is the original theme. [Seen here](#dark-jade-og).
+The Dark Jade (OG) is the original theme. More green, less grey overall. [Seen here](#dark-jade-og).
 
 ## Table of Contents
 
@@ -46,7 +48,6 @@ Jade (OG) is the original theme. [Seen here](#dark-jade-og).
 ![Goodreads - Choice Awards](images/ss-gr-2018-choice.png)
 
 
-
 **[Back to top](#table-of-contents)**
 
 ## How to use
@@ -59,13 +60,17 @@ A userstyle extension for your browser is required, here are a few to choose fro
 Install the dark theme with the links below. They support automatic updates.
 
 - [Install goodreads.com Dark (Jade) theme](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark.user.css)
-- [Install goodreads.com Dark (Jade) **-Zero saturation** theme](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark-zerosat.user.css)
+- [Install goodreads.com Dark (Jade) **OG** theme](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark-og.user.css)
+
+Default Dark (Jade) theme colors can be seen [here](#dark-jade-default). It keeps the accent colors the same but zeros out the saturation on the backgrounds making it more grey.
+
+Dark (Jade) **OG** is the original theme. More green, less grey overall. [Seen here](#dark-jade-og).
 
 Then, the raw file will open in the browser and the extension will open a new tab asking to install it. After clicking *'install style'*, you're finished.
 
 Or visit the [Goodreads dark (jade) theme](https://userstyles.org/styles/166991/goodreads-dark-jade-theme) at Userstyles.org and click **Install Style**
 
-Copy and pasting the [goodreads-dark.user.css](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark.user.css) or [goodreads-dark-zerosat.user.css](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark-zerosat.user.css) file into the extension also works.
+Copy and pasting the [goodreads-dark.user.css](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark.user.css) file into the extension also works.
 
 Further instructions can be found [here](https://github.com/openstyles/stylus/wiki/UserCSS#usercss-file).
 
