@@ -735,7 +735,8 @@
   .bookMeta,
   .keyValue,
   .sharePreview__description,
-  .addbook .myRating {
+  .addbook .myRating,
+  .giveawayTermsContent {
     color: var(--txt-grey)
   }
 
@@ -1210,7 +1211,7 @@
   .buttonToggle:disabled,
   .gr-form__submitButton:disabled {
     background-color: var(--bkg-card);
-    color: var(--txt-grey);
+    color: var(--mystic);
     border-color: var(--border);
     cursor: default;
   }
