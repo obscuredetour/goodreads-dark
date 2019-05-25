@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.8.1] - 2019-05-25
+### Added
+- Career page now styled.
+
+### Changed
+- Removed summer reading banner and logo.
+- Fixed Author blog pages styling.
+
 ## [1.8.0] - 2019-04-21
 ### Changed
 - Fixed white bkg News Feed Item w/ Author comment or like present.

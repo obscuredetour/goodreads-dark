@@ -87,6 +87,12 @@
   #signedOutHome .discoveryBoxDiscovery .discoveryBoxArrow img {
     filter: brightness(4) sepia(55%) hue-rotate(115deg) saturate(34%)
   }
+  /* Site logo reset to default - sorry GR */
+  .siteHeader__logo {
+    background: url("/assets/layout/header/goodreads_logo.svg") no-repeat;
+    background-position: center;
+    background-size: 140px 30px;
+  }
 
   #siteheader #logo img {
     filter: brightness(2) sepia(55%) hue-rotate(115deg) saturate(54%)
@@ -335,7 +341,8 @@
   .gcaRightContainer,
   .gr-contentBoxMargin--large,
   .modal__content,
-  .floatingBox {
+  .floatingBox,
+  .sequenceIndicators__circle {
     background-color: var(--raven);
     color: var(--txt-second);
     border-color: var(--border);
@@ -430,7 +437,8 @@
   .wantToReadMenu__shelfItem:hover,
   .wantToReadMenu__newShelfButtonContainer:hover,
   .controlGroup .open,
-  .controlBody {
+  .controlBody,
+  .jobsPageCoreValues__colorContainer {
     background: var(--mine)
   }
 
@@ -613,7 +621,9 @@
   .responsiveSiteFooterV2__heading,
   .responsiveSiteFooter__heading,
   .bookMeta .value,
-  .keyValue .value {
+  .keyValue .value,
+  .leadParagraph,
+  .gr-marketingPageH2 {
     color: var(--txt-main)
   }
 
@@ -737,7 +747,8 @@
   .keyValue,
   .sharePreview__description,
   .addbook .myRating,
-  .giveawayTermsContent {
+  .giveawayTermsContent,
+  .jobsListItem__location {
     color: var(--txt-grey)
   }
 
@@ -991,7 +1002,8 @@
   .shareModal__bottomContainer--social,
   .shelfChooser .shelves li.exclusive,
   .shelfChooser .newShelfButtonLi,
-  .communityAnswer {
+  .communityAnswer,
+  .leftContainer #prevNext {
     border-color: var(--border);
   }
 
@@ -1138,7 +1150,8 @@
   .readingTimeline__progressContainer,
   .graphContainer,
   .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphContainer,
-  .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphContainerMobile {
+  .readingYearContent .readingChallengeWidget .readingChallengeProgressBar .challengeProgressBar .graphContainerMobile,
+  .sequenceIndicators__circle--selected {
     background: var(--green-shadow);
   }
 
@@ -1244,6 +1257,10 @@
     border-color: var(--bkg-nav-link-hover);
   }
 
+  a.gr-button--choice,
+  a.gr-button--dark,
+  a.gr-button--red,
+  a.gr-button--teal,
   .button,
   .wantToReadButton__leftUnshelved,
   .dropdown--wantToReadMenu,
@@ -1269,6 +1286,10 @@
     border-left-color: var(--neptune) !important;
   }
 
+  a.gr-button--choice:hover,
+  a.gr-button--dark:hover,
+  a.gr-button--red:hover,
+  a.gr-button--teal:hover,
   .wantToReadButton__leftUnshelved:hover,
   .dropdown--wantToReadMenu:hover,
   .gr-button--choice:hover,
@@ -1560,10 +1581,11 @@
   }
 
   /* Remove top banner */
-  /* .siteHeader__topFullImageContainer { display: none; }
-html.withSiteHeaderTopFullImage .siteHeaderBottomSpacer {
-  padding-bottom: 3rem;
-}
-html.withSiteHeaderTopFullImage .primaryNavMenu__menu,
-html.withSiteHeaderTopFullImage .dropdown__menu--profileMenu, html.withSiteHeaderTopFullImage .dropdown__menu--siteHeader { top: initial } */
+  .siteHeader__topFullImageContainer { display: none; }
+  html.withSiteHeaderTopFullImage .siteHeaderBottomSpacer {
+    padding-bottom: 3rem;
+  }
+  html.withSiteHeaderTopFullImage .primaryNavMenu__menu,
+  html.withSiteHeaderTopFullImage .dropdown__menu--profileMenu,
+  html.withSiteHeaderTopFullImage .dropdown__menu--siteHeader { top: initial }
 }
