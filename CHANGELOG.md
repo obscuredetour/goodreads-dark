@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.8.3] - 2019-07-14
+### Added
+- Quote specific page styling fix.
+
 ## [1.8.2] - 2019-05-25
 ### Added
 - Career page now styled.

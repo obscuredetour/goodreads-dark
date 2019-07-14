@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Goodreads dark (Jade) theme
 @namespace   https://github.com/obscuredetour/
-@version     1.8.2
+@version     1.8.3
 @license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
@@ -642,6 +642,8 @@
   H1,
   .h2Container H2,
   .pageHeader h2,
+  .pageHeader,
+  h1.quoteText,
   h2.brownBackground a,
   .communityAnswerText,
   .gcaHeader,
@@ -747,7 +749,8 @@
   .sharePreview__description,
   .addbook .myRating,
   .giveawayTermsContent,
-  .jobsListItem__location {
+  .jobsListItem__location,
+  .myBooksNav ul li span.greyText {
     color: var(--txt-grey)
   }
 
