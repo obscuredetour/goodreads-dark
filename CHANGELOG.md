@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.8.4] - 2019-11-13
+### Added
+- Choice awards logo fix.
+
 ## [1.8.3] - 2019-07-14
 ### Added
 - Quote specific page styling fix.

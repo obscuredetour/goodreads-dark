@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Goodreads dark (Jade) theme
 @namespace   https://github.com/obscuredetour/
-@version     1.8.3
+@version     1.8.4
 @license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/goodreads-dark
@@ -92,6 +92,8 @@
     background-position: center;
     background-size: 140px 30px;
   }
+
+  .siteHeader__logo.siteHeader__logo--doodle { filter: brightness(.75) sepia(55%) hue-rotate(115deg) saturate(34%) }
 
   #siteheader #logo img {
     filter: brightness(2) sepia(55%) hue-rotate(115deg) saturate(54%)
