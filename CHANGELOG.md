@@ -1,9 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+<<<<<<< HEAD
 ## [1.8.5] - 2020-05-24
 ### Changed
 - Logo fix.
+=======
+## [1.8.4] - 2019-11-13
+### Added
+- Choice awards logo fix.
+>>>>>>> cba77ef12f350a38e4661efaaf31f3254016a7a7
 
 ## [1.8.3] - 2019-07-14
 ### Added

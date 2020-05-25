@@ -2,7 +2,7 @@
   <img width=580px src="images/logo.svg">
   <br>
   <a style="display: inline-block" href="https://github.com/obscuredetour/goodreads-dark/">
-    <img alt="Maintained?" src="https://img.shields.io/maintenance/yes/2019.svg?colorB=hsl%28165%2C%2042%25%2C%2035%25%29">
+    <img alt="Maintained?" src="https://img.shields.io/maintenance/yes/2020.svg?colorB=hsl%28165%2C%2042%25%2C%2035%25%29">
   </a>
   <a href="https://github.com/obscuredetour/goodreads-dark/commits/master">
     <img alt="Last commit" src="https://img.shields.io/github/last-commit/obscuredetour/goodreads-dark.svg?colorB=hsl%28165%2C%2042%25%2C%2035%25%29">
